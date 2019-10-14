@@ -1,0 +1,85 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SpringLoginRestAPI",
+		"_postman_id": "6c0735e3-4399-eee4-ef6d-45c9fee62b2f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register-user",
+			"request": {
+				"url": "{{SpringBootLoginRestApi}}/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dHV0b3JpYWxzcG9pbnQ6bXktc2VjcmV0LWtleQ==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Farid\",\n    \"lastName\": \"Ahmed\",\n    \"email\": \"farid@gmail.com\",\n    \"role\": \"ADMIN\",\n    \"username\": \"farid\",\n    \"password\": \"123\",\n    \"enabled\": false,\n    \"createdDate\": \"2019-10-07\",\n    \"updateDate\": null\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"url": "{{SpringBootLoginRestApi}}/login",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "farid",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get-one-user",
+			"request": {
+				"url": "{{SpringBootLoginRestApi}}/api/user/one/3",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"url": "{{SpringBootLoginRestApi}}/api/user/one/3",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
