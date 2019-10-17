@@ -14,6 +14,9 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableTransactionManagement
@@ -76,4 +79,14 @@ public class AppConfig {
  
         return hibernateProperties;
     }
+    
+    @Bean
+    public ViewResolver internalResourceViewResolver() {
+       InternalResourceViewResolver bean = new InternalResourceViewResolver();
+       bean.setViewClass(JstlView.class);
+       bean.setPrefix("/WEB-INF/views/");
+       bean.setSuffix(".jsp");
+       return bean;
+    }
+    
 }

@@ -35,15 +35,15 @@ public class LoginController {
 
 	}
 
-	@GetMapping("/")
-	public String Home() {
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-
-		if (!(auth instanceof AnonymousAuthenticationToken)) {
-			String currentUserName = auth.getName();			
-			return currentUserName;
-		}
-		return null;
-	}
+//	@GetMapping("/")
+//	public String Home() {
+//		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//
+//		if (!(auth instanceof AnonymousAuthenticationToken)) {
+//			String currentUserName = auth.getName();			
+//			return currentUserName;
+//		}
+//		return null;
+//	}
 
 }

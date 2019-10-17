@@ -1,0 +1,96 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html lang="zxx">
+   <head>
+      <title>Job-point a Human Resource Category Bootstrap Responsive Web Template | Home :: w3layouts</title>
+      <!--meta tags -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="keywords" content="Job-point Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+         Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+      <script>
+         addEventListener("load", function () {
+         	setTimeout(hideURLbar, 0);
+         }, false);
+         
+         function hideURLbar() {
+         	window.scrollTo(0, 1);
+         }
+      </script>
+      <!--//meta tags ends here-->
+      <!--booststrap-->
+      <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+      <!--//booststrap end-->
+      <!-- font-awesome icons -->
+      <link href="../assets/css/font-awesome.css" rel="stylesheet">
+      <!-- //font-awesome icons -->
+      <!--stylesheets-->
+      <link href="../assets/css/style.css" rel='stylesheet' type='text/css' media="all">
+      <!--//stylesheets-->
+      <link href="//fonts.googleapis.com/css?family=Mukta+Malar:400,500,600,700" rel="stylesheet">
+      <link href="//fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+   </head>
+   <body>
+      <div class="header-outs" id="header">
+         <!--banner -->
+         <div class="header-w3layouts">
+            <!--//navigation section -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+               <div class="hedder-up">
+                  <h1><a class="navbar-brand" href="index.html">Job-Point</a></h1>
+               </div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                  <ul class="navbar-nav ">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="about.html" class="nav-link ">About</a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="service.html" class="nav-link">Service</a>
+                     </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                           <a class="nav-link " href="typography.html">Typography</a>
+                           <a href="gallery.html" class="nav-link">Gallery</a>
+                        </div>
+                     </li>
+                     <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                     </li>
+                     <li class="nav-button">
+                        <button type="button" class="btn login-hedder" data-toggle="modal" data-target="#exampleModalCenter">
+                        Login
+                        </button>
+                     </li>
+                  </ul>
+                  <div class="both-butns">
+                     <ul>
+                        <li>
+                           <button type="button" class="register-hedder"  data-toggle="modal" data-target="#exampleModalCenter2">
+                           Register
+                           </button>
+                        </li>
+                        <li>
+                           <div class="contact-hedder">
+                              <a href="contact.html">
+                              Contact Us</a>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+            <!--//navigation section -->
+            <div class="clearfix"> </div>
+         </div>
+      </div>
+      <!-- //Navigation -->
