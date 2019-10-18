@@ -140,6 +140,11 @@
 	</div>
 </div>
 <!--//Register-->
+
+<script src="../assets/js/angular.min.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/controller.js"></script>
+
 <!--js working-->
 <script src='../assets/js/jquery-2.2.3.min.js'></script>
 <!--//js working-->

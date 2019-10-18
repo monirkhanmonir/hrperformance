@@ -35,10 +35,10 @@
       <div class="header-outs" id="header">
          <!--banner -->
          <div class="header-w3layouts">
-            <!--//navigation section -->
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <!--//navigation section -->	
+            <nav class="navbar navbar-expand-lg" style="background-color:rgba(0,0,0,0.2)">
                <div class="hedder-up">
-                  <h1><a class="navbar-brand" href="index.html">Job-Point</a></h1>
+                  <h1><a class="navbar-brand" href="index.html">HR Performance</a></h1>
                </div>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
@@ -46,25 +46,25 @@
                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                   <ul class="navbar-nav ">
                      <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                      </li>
                      <li class="nav-item">
-                        <a href="about.html" class="nav-link ">About</a>
+                        <a href="/about" class="nav-link ">About</a>
                      </li>
                      <li class="nav-item">
                         <a href="service.html" class="nav-link">Service</a>
                      </li>
                      <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Pages
+                        Employee
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                           <a class="nav-link " href="typography.html">Typography</a>
-                           <a href="gallery.html" class="nav-link">Gallery</a>
+                           <a class="nav-link " href="/employee/showAllEmployee">All Employee</a>
+                           <a href="/employee/transfer" class="nav-link">Transfer</a>
                         </div>
                      </li>
                      <li class="nav-item">
-                        <a href="contact.html" class="nav-link">Contact</a>
+                        <a href="/contactus" class="nav-link">Contact</a>
                      </li>
                      <li class="nav-button">
                         <button type="button" class="btn login-hedder" data-toggle="modal" data-target="#exampleModalCenter">
@@ -81,7 +81,7 @@
                         </li>
                         <li>
                            <div class="contact-hedder">
-                              <a href="contact.html">
+                              <a href="/contactus">
                               Contact Us</a>
                            </div>
                         </li>

@@ -10,4 +10,14 @@ public class HomeController {
 	public ModelAndView getIndexPage() {
 		return new ModelAndView("home");
 	}
+	
+	@GetMapping(value = "/about")
+	public ModelAndView getAboutPage() {
+		return new ModelAndView("about");
+	}
+	
+	@GetMapping(value = "/contactus")
+	public ModelAndView getContactPage() {
+		return new ModelAndView("contactus");
+	}
 }
