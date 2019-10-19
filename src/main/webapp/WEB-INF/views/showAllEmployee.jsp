@@ -44,7 +44,7 @@
 			<td>{{employee.jobTitle}}</td>
 			<td>{{employee.password}}</td>
 			<td>{{employee.address}}</td>
-			
+
 			<td>{{employee.exparience}}</td>
 			<td>
 				<button class="btn btn-success">Edit</button>
@@ -77,15 +77,15 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						<form action="">
+						<form action="/employee/employeeRegister" method="post">
 							<div class="row wls-contact-mid">
 								<div class="col-md-6 col-sm-6 form-group contact-forms">
-									<input type="text" class="form-control" placeholder="Fist Name"
-										required="">
+									<input type="text" class="form-control"
+										placeholder="Employee Name" required="" name="empName">
 								</div>
 								<div class="col-md-6 col-sm-6 form-group contact-forms">
 									<input type="email" class="form-control"
-										placeholder="Employee Email" required="">
+										placeholder="Employee Email" required="" name="empEmail">
 								</div>
 							</div>
 
@@ -97,7 +97,7 @@
 										name="gender">Other
 								</div>
 								<div class="col-md-6 col-sm-6 form-group contact-forms">
-									<select class="form-control">
+									<select class="form-control" name="jobTitle">
 										<option>Select job title</option>
 										<option value="Manager">Manager</option>
 										<option value="Area Manager">Area Manager</option>
@@ -111,11 +111,12 @@
 
 								<div class="col-md-6 col-sm-6 form-group contact-forms">
 									<span>Date Of Birth</span> <input type="date"
-										class="form-control" placeholder="Date Of Birth" required="">
+										class="form-control" placeholder="Date Of Birth" required=""
+										name="birthDate">
 								</div>
 								<div class="col-md-6 col-sm-6 form-group contact-forms">
 									<span>join Date</span> <input type="date" class="form-control"
-										placeholder="Join Date" required="">
+										placeholder="Join Date" required="" name="joinDate">
 								</div>
 							</div>
 
@@ -123,26 +124,26 @@
 
 								<div class="col-md-6 col-sm-6 form-group contact-forms">
 									<input type="password" class="form-control"
-										placeholder="Password" required="" />
+										placeholder="Password" required="" name="password" />
 								</div>
 								<div class="col-md-6 col-sm-6 form-group contact-forms">
 									<input type="password" class="form-control"
-										placeholder="Repassword" required="" />
+										placeholder="Repassword" required="" name="repassword" />
 								</div>
 							</div>
 
 							<div class="form-group ">
 								<textarea class="form-control" placeholder="Address..."
-									required=""></textarea>
+									required="" name="address"></textarea>
 							</div>
-
+							<button type="submit" class="btn btn-primary">Save</button>
 
 						</form>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary"
 							data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save</button>
+
 					</div>
 				</div>
 			</div>
