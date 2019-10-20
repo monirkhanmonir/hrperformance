@@ -64,8 +64,8 @@
 						</a></li>
 						<li class="nav-item"><a href="/about" class="nav-link ">About</a>
 						</li>
-						<li class="nav-item"><a href="/employee/report" class="nav-link ">Employee Report</a>
-						</li>
+						<!-- <li class="nav-item"><a href="/employee/report" class="nav-link ">E-Report</a>
+						</li> -->
 						<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle" href="#" id="navbarDropdown1"
 							role="button" data-toggle="dropdown" aria-haspopup="true"

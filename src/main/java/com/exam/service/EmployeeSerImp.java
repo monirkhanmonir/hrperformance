@@ -1,5 +1,7 @@
 package com.exam.service;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,18 @@ public class EmployeeSerImp implements EmployeeServiceInterF{
 	@Override
 	public void storeEmployee(Employee emp) {
 		employeeInterF.storeEmployee(emp);
+	}
+
+	@Override
+	public List<Employee> getAll() {
+		
+		return employeeInterF.getAll();
+	}
+
+	@Override
+	public Employee getById(int id) {
+		
+		return employeeInterF.getById(id);
 	}
 	
 	

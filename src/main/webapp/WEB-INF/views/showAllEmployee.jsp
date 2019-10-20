@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <jsp:include page="header.jsp"></jsp:include>
 <div class="inner_page-banner one-img"></div>
 <!-- short -->
@@ -20,7 +21,10 @@
 		<button type="button" class="btn btn-success" data-toggle="modal"
 			data-target="#exampleModal">Add New</button>
 	</div>
-	<table class="table">
+
+
+
+	<table class="table table-hover">
 		<tr>
 			<th>Id</th>
 			<th>Name</th>
@@ -34,29 +38,35 @@
 			<th>Expreance</th>
 			<th>Action</th>
 		</tr>
-		<tr ng-repeat="employee in employees">
-			<td>{{employee.id}}</td>
-			<td>{{employee.name}}</td>
-			<td>{{employee.email}}</td>
-			<td>{{employee.deteOfBirth}}</td>
-			<td>{{employee.joinDate}}</td>
-			<td>{{employee.gender}}</td>
-			<td>{{employee.jobTitle}}</td>
-			<td>{{employee.password}}</td>
-			<td>{{employee.address}}</td>
+		<c:forEach var="employee" items="${employeeList}">
+			<tr>
+				<td>${employee.id}</td>
+				<td>${employee.empName}</td>
+				<td>${employee.empEmail}</td>
+				<td>${employee.gender}</td>
+				<td>${employee.jobTitle}</td>
+				<td>${employee.birthDate}</td>
+				<td>${employee.joinDate}</td>
+				<td>${employee.password}</td>
+				<td>${employee.repassword}</td>
+				<td>${employee.address}</td>
 
-			<td>{{employee.exparience}}</td>
-			<td>
-				<button class="btn btn-success">Edit</button>
-				<button class="btn btn-danger">Delete</button>
-			</td>
-		</tr>
+
+				<td>
+				
+					<!-- <button class="btn btn-success" data-toggle="modal"
+						data-target="#exampleModal" >
+						<i class="fa fa-edit"></i>
+					</button> -->
+					
+					<a href="/editemp/${employee.id}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+					<button class="btn btn-danger">Delete</button>
+				</td>
+			</tr>
+		</c:forEach>
 
 	</table>
 
-	Gender: <input type="radio" value="Male" name="gender">Male <input
-		type="radio" value="Female" name="gender">Female <input
-		type="radio" value="Other" name="gender">Other
 
 	<!-- Add New Modal Row Section  start-->
 	<div class="addmodal">
