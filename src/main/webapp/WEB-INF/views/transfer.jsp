@@ -15,66 +15,87 @@
 
 <section>
 	<div class="container py-lg-5 py-md-4 py-sm-4 py-3">
-		<h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Transfer
-			From</h3>
+		<h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Task
+			Issue From</h3>
 		<div class="row">
 			<div class="col-lg-8 col-md-8 offset-md-2 offset-lg-2">
 				<div class="info-para">
 					<!--contact-map -->
 					<!-- Default form register -->
-					<form>
+					<form action="/employee/taskissue" method="post">
 						<div class="form-row">
 							<div class="form-group col-md-6">
-								<label for="inputEmail4">Id</label> <input type="text"
-									class="form-control" id="inputEmail4" >
+								<label for="inputEmail4">Task Id:</label> <input type="text"
+									class="form-control" id="inputEmail4" name="taskId">
 							</div>
 							<div class="form-group col-md-6">
-								<label for="inputPassword4">Name:</label> <input
-									type="text" class="form-control" id="inputPassword4"
-									>
+								<label for="inputEmail4">Employee Id:</label> <input
+									type="number" class="form-control" id="inputEmail4"
+									name="empId">
 							</div>
 						</div>
-						
+
 						<div class="form-row">
 							<div class="form-group col-md-6">
-								<label>Transfer Date: </label> <input type="date"
-									class="form-control">
+								<label for="inputEmail4">Task Name:</label> <input type="text"
+									class="form-control" id="inputEmail4" name="taskName">
 							</div>
 							<div class="form-group col-md-6">
-								<label >Point Score:</label> <input
-									type="number" class="form-control"
-									>
+								<label for="inputEmail4">Task Unit:</label> <input
+									type="number" class="form-control" id="inputEmail4"
+									name="taskUnit">
 							</div>
 						</div>
-						
+
+						<div class="form-row">
+							<div class="form-group col-md-12">
+								<label for="inputEmail4">Assign Name:</label> <select
+									class="form-control" name="assignName">
+									<option>Select One</option>
+									<option value="Manager">Manager</option>
+									<option value="Hr">HR</option>
+									<option value="Manager">Manager</option>
+								</select>
+							</div>							
+						</div>
+
 						<div class="form-row">
 							<div class="form-group col-md-6">
-								<label>Previous Department: </label>
-								<select class="form-control">
-								<option>Select Pvious Department</option>
-									<option value="Marketting">Marketting</option>
-									<option value="Sales">Sales</option>
-									<option value="parches">parches</option>
+								<label>Issue Date: </label> <input type="date"
+									class="form-control" name="issueDate">
+							</div>
+							<div class="form-group col-md-6">
+								<label>Restriction Date: </label> <input type="date"
+									class="form-control" name="restrictionDate">
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label>Issue Status: </label> <select class="form-control"
+									name="issueStatus">
+									<option>Select Status</option>
+									<option value="Begin">Begin</option>
 								</select>
 							</div>
 							<div class="form-group col-md-6">
-								<label>Current Department: </label>
-								<select class="form-control">
-								<option>Select Current Department</option>
-									<option value="Marketting">Marketting</option>
-									<option value="Sales">Sales</option>
-									<option value="parches">parches</option>
+								<label>Priority: </label> <select class="form-control"
+									name="issuePriority">
+									<option>Select One</option>
+									<option value="Urgent">Urgent</option>
+									<option value="Normal">Normal</option>
+									<option value="Optional">Optional</option>
 								</select>
 							</div>
 						</div>
-						
+
 						<div class="form-group">
 							<label for="inputAddress">Remark:</label>
-							<textarea rows="" cols="" class="form-control"></textarea>
+							<textarea rows="" cols="" class="form-control" name="ramark"></textarea>
 						</div>
-						
-						
-						
+
+
+
 						<button type="submit" class="btn btn-primary">Submit</button>
 					</form>
 					<!-- Default form register -->

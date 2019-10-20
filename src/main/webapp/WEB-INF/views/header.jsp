@@ -71,7 +71,7 @@
 							role="button" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false"> Report </a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-								<a class="nav-link " href="">All Employee</a>
+								<a class="nav-link " href="/employee/showAllTask">Issue Task</a>
 								 <a href="" class="nav-link">Transfer</a>
 								  <a href="" class="nav-link">Retirement</a>
 								<a href="" class="nav-link">Appraisal</a>

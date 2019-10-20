@@ -59,7 +59,7 @@
 						<i class="fa fa-edit"></i>
 					</button> -->
 					
-					<a href="/editemp/${employee.id}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+					<a href="/employee/editemp/${employee.id}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
 					<button class="btn btn-danger">Delete</button>
 				</td>
 			</tr>
