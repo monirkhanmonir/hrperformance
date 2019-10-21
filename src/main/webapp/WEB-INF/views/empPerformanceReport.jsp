@@ -62,7 +62,7 @@
 								<div class="alert alert-primary" role="alert">
 									<h5>Employee Performance Ratings</h5>
 								</div>
-								<table class="table table-bordered text-center"  >
+								<table class="table table-bordered text-center">
 									<thead class="thead-light">
 										<tr>
 											<th colspan="5">&nbsp;</th>
@@ -74,7 +74,7 @@
 										</tr>
 									</thead>
 									<tbody>
-									
+
 										<tr>
 											<th colspan="5">Job Knowledge</th>
 											<td><input type="radio" value="1" name="jobKnowledge"></td>
@@ -125,11 +125,16 @@
 										</tr>
 										<tr>
 											<th colspan="5">Communication/Listening Skills</th>
-											<td><input type="radio" value="1" name="communicationSkills"></td>
-											<td><input type="radio" value="2" name="communicationSkills"></td>
-											<td><input type="radio" value="3" name="communicationSkills"></td>
-											<td><input type="radio" value="4" name="communicationSkills"></td>
-											<td><input type="radio" value="5" name="communicationSkills"></td>
+											<td><input type="radio" value="1"
+												name="communicationSkills"></td>
+											<td><input type="radio" value="2"
+												name="communicationSkills"></td>
+											<td><input type="radio" value="3"
+												name="communicationSkills"></td>
+											<td><input type="radio" value="4"
+												name="communicationSkills"></td>
+											<td><input type="radio" value="5"
+												name="communicationSkills"></td>
 										</tr>
 										<tr>
 											<th colspan="5">Comment:</th>
@@ -147,19 +152,20 @@
 											<th colspan="5">Comment:</th>
 											<td colspan="5"><input type="text" class="form-control"></td>
 										</tr>
-										
-										
-										
-
+										<tr>
+											<th colspan="5" class="font-weight-bold text-primary">Overall
+												Rating:</th>
+											<td colspan="5"><input type="text" class="form-control"></td>
+										</tr>
 									</tbody>
-
-
 								</table>
-
-						
-
-
-
+								<div class="alert-primary" role="alert">
+									<h3>Evaluation</h3>
+								</div>
+								<div class="form-group">
+									<label >ADDITIONAL COMMENTS</label> 
+									<textarea rows="" cols="" class="form-control"></textarea>
+								</div>
 
 								<button type="submit" class="btn btn-primary">Submit</button>
 							</form>

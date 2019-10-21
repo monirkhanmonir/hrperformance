@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -60,6 +61,20 @@ public class TransferController {
 		return new ModelAndView("showAllAdminTask",task);
 		
 	}
+	
+	@GetMapping(value = "/taskissue/{id}")
+	public ModelAndView getIssueById(@PathVariable("id") int id, Map<String, Object > map) {
+		map.put("emptask",taskIssueInterFService.getIssueById(id) );
+		System.out.println("con Ok");
+		return new ModelAndView("emptaskshow",map);
+	}
+	
+	@GetMapping("/emptaskpage")
+	public ModelAndView getEmpTaskPage() {
+		return new ModelAndView("emptaskshow");
+	}
+	
+	
 	
 
 }

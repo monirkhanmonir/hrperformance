@@ -30,6 +30,7 @@ public class EmployeeDaoImp implements EmployeeInterF{
 	}
 	@Override
 	public Employee getById(int id) {
+		System.out.println("ok");
 		return  sessionFactory.getCurrentSession().get(Employee.class, id);
 	}
 	
