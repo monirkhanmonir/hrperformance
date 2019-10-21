@@ -54,8 +54,7 @@ public class TransferController {
 	
 	@GetMapping(value = "/showAllTask")
 	public ModelAndView showAllTask() {
-		Map<String, Object> task = new HashMap<>();
-		
+		Map<String, Object> task = new HashMap<>();		
 		List<TaskIssue> taskLsit = taskIssueInterFService.getAllTask();
 		task.put("taskEntity", taskLsit);
 		return new ModelAndView("showAllAdminTask",task);

@@ -7,10 +7,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping(value = "/employee")
-public class RetirementController {
-	@GetMapping(value = "/retirement")
+public class EmpPerformenceController {
+	@GetMapping(value = "/empPerformance")
 	public ModelAndView getRetirementPage() {
-		return new ModelAndView("retirement");
+		return new ModelAndView("empPerformanceReport");
 	}
 
 }
