@@ -14,7 +14,7 @@
 </div>
 <!-- //short-->
 <h2>employee Task Show Page</h2>
-<%-- 
+ 
 <table class="table">
 	<tr>
 		<th>Task Id</th>
@@ -29,7 +29,7 @@
 		<th>Remark</th>	
 	</tr>
 	
-	<c:forEach var="task" items="${emptaskshow}">
+	<c:forEach var="task" items="${emptask}">
 		<tr>
 			<td>${task.taskId}</td>
 			<td>${task.empId}</td>
@@ -40,16 +40,15 @@
 			<td>${task.restrictionDate}</td>
 			<td>${task.issueStatus}</td>
 			<td>${task.issuePriority}</td>
-			<td>${task.ramark}</td>
-			
+			<td>${task.ramark}</td>	
 		</tr>
 	</c:forEach> 
-</table> --%>
+</table> 
 
 
 
 <
-<table class="table">
+<!-- <table class="table">
 	<thead>
 		<tr>
 			<th>Column 1 Heading</th>
@@ -101,7 +100,7 @@
 
 </table>
 
-
+ -->
 
 
 

@@ -141,15 +141,15 @@
 </div>
 <!--//Register-->
 
-<script src="../assets/js/angular.min.js"></script>
-<script src="../assets/js/app.js"></script>
-<script src="../assets/js/controller.js"></script>
+<script src="/../assets/js/angular.min.js"></script>
+<script src="/../assets/js/app.js"></script>
+<script src="/../assets/js/controller.js"></script>
 
 <!--js working-->
-<script src='../assets/js/jquery-2.2.3.min.js'></script>
+<script src='/../assets/js/jquery-2.2.3.min.js'></script>
 <!--//js working-->
 <!--responsiveslides banner-->
-<script src="../assets/js/responsiveslides.min.js"></script>
+<script src="/../assets/js/responsiveslides.min.js"></script>
 <script>
 	// You can also use "$(window).load(function() {"
 	$(function() {
@@ -172,16 +172,20 @@
 </script>
 <!--// responsiveslides banner-->
 <!--About OnScroll-Number-Increase-JavaScript -->
-<script src="../assets/js/jquery.waypoints.min.js"></script>
-<script src="../assets/js/jquery.countup.js"></script>
+<script src="/../assets/js/jquery.waypoints.min.js"></script>
+<script src="/../assets/js/jquery.countup.js"></script>
 <script>
 	$('.counter').countUp();
 </script>
 <!-- //OnScroll-Number-Increase-JavaScript -->
 <!-- start-smoth-scrolling -->
-<script src="../assets/js/move-top.js"></script>
-<script src="../assets/js/easing.js"></script>
+<script src="/../assets/js/move-top.js"></script>
+<script src="/../assets/js/easing.js"></script>
 <script>
+	$(window).load(function() {
+		$('#myModal').modal('show');
+	});
+
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event) {
 			event.preventDefault();
@@ -211,7 +215,7 @@
 </script>
 <!-- //here ends scrolling icon -->
 <!--bootstrap working-->
-<script src="../assets/js/bootstrap.min.js"></script>
+<script src="/../assets/js/bootstrap.min.js"></script>
 <!-- //bootstrap working-->
 </body>
 </html>

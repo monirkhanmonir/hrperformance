@@ -46,7 +46,7 @@ public class employeeController {
 		emp.setAddress(req.getParameter("address"));
 		employeeServiceInterF.storeEmployee(emp);
 
-		return new ModelAndView("showAllEmployee");
+		return new ModelAndView("redirect:/employee/showAllEmployee");
 	}
 
 	@GetMapping("/showAllEmployee")
@@ -62,5 +62,13 @@ public class employeeController {
 		System.out.println(id);
 		return new ModelAndView("/editemployee",map);
 	}
-
+	
+	@RequestMapping(value = "/editemppage")
+	public ModelAndView showeditpage() {
+		
+		
+		return new ModelAndView("/editemployee");
+	}
+	
+	
 }

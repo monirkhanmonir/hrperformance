@@ -40,9 +40,11 @@ public class TaskIssueImpDao implements TaskIssueInterFDao {
 	}
 
 	@Override
-	public List<TaskIssue> getIssueById(int id) {
+	public List<TaskIssue> getIssueById(int empId) {
 		
-		return  (List<TaskIssue>) sessionFactory.getCurrentSession().createQuery("From TaskIssue task where task.empId='"+id+"'").list();
+		List<TaskIssue> issu = (List<TaskIssue>)  sessionFactory.getCurrentSession().createQuery("From TaskIssue task where task.empId=:empId").setParameter("empId", empId).list();
+		
+		return issu;
 	}
 
 }

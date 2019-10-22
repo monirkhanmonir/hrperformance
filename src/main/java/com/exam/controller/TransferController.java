@@ -65,7 +65,7 @@ public class TransferController {
 	@GetMapping(value = "/taskissue/{id}")
 	public ModelAndView getIssueById(@PathVariable("id") int id, Map<String, Object > map) {
 		map.put("emptask",taskIssueInterFService.getIssueById(id) );
-		System.out.println("con Ok");
+		System.out.println("con Ok"+""+ taskIssueInterFService.getIssueById(id) .get(0));
 		return new ModelAndView("emptaskshow",map);
 	}
 	

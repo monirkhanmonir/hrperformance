@@ -7,4 +7,7 @@ app.controller("myCtrl",function($scope){
 		{id:'16',name:'name5',email:'email@gmail.com',deteOfBirth:'12/1/1990',joinDate:'12/12/2010',gender:"Male",jobTitle:'Manager',password:'123',address:'Dhaka5',exparience:'3 years'}
 	];
 	
+	
+	
+	
 });

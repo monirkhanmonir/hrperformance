@@ -22,14 +22,14 @@
 </script>
 <!--//meta tags ends here-->
 <!--booststrap-->
-<link href="../assets/css/bootstrap.min.css" rel="stylesheet"
+<link href="/../assets/css/bootstrap.min.css" rel="stylesheet"
 	type="text/css" media="all">
 <!--//booststrap end-->
 <!-- font-awesome icons -->
-<link href="../assets/css/font-awesome.css" rel="stylesheet">
+<link href="/../assets/css/font-awesome.css" rel="stylesheet">
 <!-- //font-awesome icons -->
 <!--stylesheets-->
-<link href="../assets/css/style.css" rel='stylesheet' type='text/css'
+<link href="/../assets/css/style.css" rel='stylesheet' type='text/css'
 	media="all">
 <!--//stylesheets-->
 <link
@@ -106,7 +106,7 @@
 							</li>
 							<li>
 								<div class="contact-hedder">
-									<a href="/contactus"> Contact Us</a>
+									<a href="/logout"> Log Out</a>
 								</div>
 							</li>
 						</ul>
