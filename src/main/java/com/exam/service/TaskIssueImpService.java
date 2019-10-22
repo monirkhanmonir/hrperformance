@@ -30,5 +30,10 @@ public class TaskIssueImpService implements TaskIssueInterFService{
 		
 		return TaskIssueInterF.getIssueById(id);
 	}
+	@Override
+	public TaskIssue taskEmpUpdate(TaskIssue task) {
+		TaskIssueInterF.taskEmpUpdate(task);
+		return task;
+	}
 
 }

@@ -75,7 +75,7 @@
 								<label>Issue Status: </label> <select class="form-control"
 									name="issueStatus">
 									<option>Select Status</option>
-									<option value="Begin">Begin</option>
+									<option value="Begin">On going</option>
 								</select>
 							</div>
 							<div class="form-group col-md-6">

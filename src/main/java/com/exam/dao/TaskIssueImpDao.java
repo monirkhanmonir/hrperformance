@@ -18,7 +18,7 @@ public class TaskIssueImpDao implements TaskIssueInterFDao {
 	public TaskIssue storeTask(TaskIssue task) {
 
 		try {
-			sessionFactory.getCurrentSession().save(task);
+			sessionFactory.getCurrentSession().saveOrUpdate(task);
 			return (task);
 		} catch (Exception e) {
 			return null;
@@ -45,6 +45,12 @@ public class TaskIssueImpDao implements TaskIssueInterFDao {
 		List<TaskIssue> issu = (List<TaskIssue>)  sessionFactory.getCurrentSession().createQuery("From TaskIssue task where task.empId=:empId").setParameter("empId", empId).list();
 		
 		return issu;
+	}
+
+	@Override
+	public TaskIssue taskEmpUpdate(TaskIssue task) {
+		sessionFactory.getCurrentSession().update("update TaskIssue set issueStatus='"+task.getIssueStatus()+"',finishDate='"+task.getFinishDate()+"'where taskId='"+task.getTaskId()+"'");
+		return task;
 	}
 
 }

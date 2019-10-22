@@ -69,9 +69,30 @@ public class TransferController {
 		return new ModelAndView("emptaskshow",map);
 	}
 	
-	@GetMapping("/emptaskpage")
-	public ModelAndView getEmpTaskPage() {
-		return new ModelAndView("emptaskshow");
+	@PostMapping("/taskDone")
+	public ModelAndView getEmpTaskPage(HttpServletRequest req) {
+		TaskIssue task = new TaskIssue();
+		task.setFinishDate(req.getParameter("finishDate"));
+		task.setTaskId(req.getParameter("taskId"));
+		task.setIssueStatus("Done");
+		System.err.println(req.getParameter("taskId"));
+		task = taskIssueInterFService.taskEmpUpdate(task);
+		if(task!=null) {
+			System.out.println("operation Success");
+			return new ModelAndView("emptaskshow");
+		}else {
+			return null;
+		}
+		
+		
+	}
+	
+	
+	@GetMapping(value = "/onGoingTask")
+	public List<TaskIssue> taskList(){
+		
+		System.out.println("on going accept");
+		return null;
 	}
 	
 	

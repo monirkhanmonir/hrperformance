@@ -13,95 +13,62 @@
 	</div>
 </div>
 <!-- //short-->
-<h2>employee Task Show Page</h2>
- 
-<table class="table">
-	<tr>
-		<th>Task Id</th>
-		<th>Emp Id</th>
-		<th>Task Name</th>
-		<th>Task Unit</th>
-		<th>Assign Name</th>
-		<th>Issue Date</th>
-		<th>Restriction Date</th>
-		<th>Issue Status</th>
-		<th>Issue Priority</th>
-		<th>Remark</th>	
-	</tr>
-	
+<div class="container">
+	<h2>employee Task Show Page</h2>
 	<c:forEach var="task" items="${emptask}">
-		<tr>
-			<td>${task.taskId}</td>
-			<td>${task.empId}</td>
-			<td>${task.taskName}</td>
-			<td>${task.taskUnit}</td>
-			<td>${task.assignName}</td>
-			<td>${task.issueDate}</td>
-			<td>${task.restrictionDate}</td>
-			<td>${task.issueStatus}</td>
-			<td>${task.issuePriority}</td>
-			<td>${task.ramark}</td>	
-		</tr>
-	</c:forEach> 
-</table> 
+
+		<div class="card">
+			<div class="card-header">${task.taskName}</div>
+			<div class="card-body">
+				<h5 class="card-title">Employee task</h5>
+				<table class="table">
+					<tr>
+						<th>Task Id</th>
+						<td>${task.taskId}</td>
+						<th>Task Name</th>
+						<td>${task.taskName}</td>
+						<th>Assign Name</th>
+						<td>${task.assignName}</td>
+					</tr>
+					<tr>
+
+						<th>Task Unit</th>
+						<td>${task.taskUnit}</td>
+						<th>Issue Date</th>
+						<td>${task.issueDate}</td>
+						<th>Restriction Date</th>
+						<td>${task.restrictionDate}</td>
+					</tr>
+					<tr>
+						<th>Issue Status</th>
+						<td>${task.issueStatus}</td>
+						<th>Issue Priority</th>
+						<td>${task.issuePriority}</td>
+						<th>Remark</th>
+						<td>${task.ramark}</td>
+					</tr>
+				</table>
+
+				<form action="/employee/taskDone" method="post">
+					<table class="table">
+						<tr>
+						<input type="text" value="${task.taskId}" readonly="readonly" name="taskId"/>
+							<th>Finish Date:</th>
+							<td><input type="date" name="finishDate"
+								class="form-control" /></td>
+							<td><input type="submit" value="Done" class="btn btn-success"/></td>
+						</tr>
+					</table>
+				</form>
 
 
+			</div>
+		</div>
+		<br>
+		<br>
 
-<
-<!-- <table class="table">
-	<thead>
-		<tr>
-			<th>Column 1 Heading</th>
-			<th>Column 2 Heading</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>Task Id</th>
-			<td></td>
-		</tr>
-		<tr>
-			<th>Emp Id</th>
-			<td></td>
-		</tr>
-		<tr>
-			<th>Task Name</th>
-			<td></td>
-		</tr>
-		<tr>
-			<th>Task Unit</th>
-			<td></td>
-		</tr>
-		<tr>
-			<th>Assign Name</th>
-			<td></td>
-		</tr>
-		<tr>
-			<th>Issue Date</th>
-			<td></td>
-		</tr>
-		<tr>
-			<th>Restriction Date</th>
-			<td></td>
-		</tr>
-		<tr>
-			<th>Issue Status</th>
-			<td></td>
-		</tr>
-		<tr>
-			<th>Issue Priority</th>
-			<td></td>
-		</tr>
-		<tr>
-			<th>Remark</th>
-			<td></td>
-		</tr>
-	</tbody>
-
-</table>
-
- -->
-
+	</c:forEach>
+</div>
 
 
 <jsp:include page="footer.jsp"></jsp:include>

@@ -17,6 +17,14 @@ public class TaskIssue {
 	public String issueStatus;
 	public String issuePriority;
 	public String ramark;
+	public String finishDate;
+	
+	public String getFinishDate() {
+		return finishDate;
+	}
+	public void setFinishDate(String finishDate) {
+		this.finishDate = finishDate;
+	}
 	public String getTaskId() {
 		return taskId;
 	}
@@ -82,8 +90,10 @@ public class TaskIssue {
 	public String toString() {
 		return "TaskIssue [taskId=" + taskId + ", empId=" + empId + ", taskName=" + taskName + ", taskUnit=" + taskUnit
 				+ ", assignName=" + assignName + ", issueDate=" + issueDate + ", restrictionDate=" + restrictionDate
-				+ ", issueStatus=" + issueStatus + ", issuePriority=" + issuePriority + ", ramark=" + ramark + "]";
+				+ ", issueStatus=" + issueStatus + ", issuePriority=" + issuePriority + ", ramark=" + ramark
+				+ ", finishDate=" + finishDate + "]";
 	}
+
 
 	
 	

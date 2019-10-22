@@ -8,4 +8,5 @@ public interface TaskIssueInterFService {
 	public TaskIssue storeTask(TaskIssue task);
 	public List<TaskIssue> getAllTask();
 	public List<TaskIssue> getIssueById(int id);
+	public TaskIssue taskEmpUpdate(TaskIssue task);
 }
