@@ -9,4 +9,7 @@ public interface TaskIssueInterFService {
 	public List<TaskIssue> getAllTask();
 	public List<TaskIssue> getIssueById(int id);
 	public TaskIssue taskEmpUpdate(TaskIssue task);
+	public List<TaskIssue> getAllDoneTask();
+	
+	public TaskIssue getIssueByTaskId(String taskId);
 }

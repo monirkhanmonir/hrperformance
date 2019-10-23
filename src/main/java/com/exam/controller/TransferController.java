@@ -71,15 +71,18 @@ public class TransferController {
 	
 	@PostMapping("/taskDone")
 	public ModelAndView getEmpTaskPage(HttpServletRequest req) {
-		TaskIssue task = new TaskIssue();
+		String taskId = (req.getParameter("taskId"));
+		TaskIssue task = taskIssueInterFService.getIssueByTaskId(taskId);
+		if(task == null) {
+			return null;
+		}
 		task.setFinishDate(req.getParameter("finishDate"));
-		task.setTaskId(req.getParameter("taskId"));
 		task.setIssueStatus("Done");
 		System.err.println(req.getParameter("taskId"));
 		task = taskIssueInterFService.taskEmpUpdate(task);
 		if(task!=null) {
 			System.out.println("operation Success");
-			return new ModelAndView("emptaskshow");
+			return new ModelAndView("redirect:/employee/taskissue/21");
 		}else {
 			return null;
 		}

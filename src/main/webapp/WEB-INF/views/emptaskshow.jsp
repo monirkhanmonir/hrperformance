@@ -21,6 +21,7 @@
 			<div class="card-header">${task.taskName}</div>
 			<div class="card-body">
 				<h5 class="card-title">Employee task</h5>
+				
 				<table class="table">
 					<tr>
 						<th>Task Id</th>
@@ -52,7 +53,7 @@
 				<form action="/employee/taskDone" method="post">
 					<table class="table">
 						<tr>
-						<input type="text" value="${task.taskId}" readonly="readonly" name="taskId"/>
+						<input type="text" value="${task.taskId}" readonly="readonly" name="taskId" hidden="true"/>
 							<th>Finish Date:</th>
 							<td><input type="date" name="finishDate"
 								class="form-control" /></td>

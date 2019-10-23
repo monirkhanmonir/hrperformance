@@ -30,9 +30,12 @@ public class TaskIssueImpDao implements TaskIssueInterFDao {
 	public List<TaskIssue> getAllTask() {
 
 		try {
-			
-			List<TaskIssue> taskList = (List<TaskIssue>) sessionFactory.getCurrentSession().createQuery("From TaskIssue").list();
-			
+
+			List<TaskIssue> taskList = (List<TaskIssue>) sessionFactory.getCurrentSession()
+					.createQuery("From TaskIssue").list();
+			// List<TaskIssue> taskList = (List<TaskIssue>)
+			// sessionFactory.getCurrentSession().createQuery("From TaskIssue task where
+			// task.issueStatus='Done'").list();
 			return taskList;
 		} catch (Exception e) {
 			return null;
@@ -41,16 +44,37 @@ public class TaskIssueImpDao implements TaskIssueInterFDao {
 
 	@Override
 	public List<TaskIssue> getIssueById(int empId) {
-		
-		List<TaskIssue> issu = (List<TaskIssue>)  sessionFactory.getCurrentSession().createQuery("From TaskIssue task where task.empId=:empId").setParameter("empId", empId).list();
-		
+
+		List<TaskIssue> issu = (List<TaskIssue>) sessionFactory.getCurrentSession()
+				.createQuery("From TaskIssue task where task.empId=:empId and task.issueStatus='Begin'")
+				.setParameter("empId", empId).list();
+
 		return issu;
 	}
 
 	@Override
 	public TaskIssue taskEmpUpdate(TaskIssue task) {
-		sessionFactory.getCurrentSession().update("update TaskIssue set issueStatus='"+task.getIssueStatus()+"',finishDate='"+task.getFinishDate()+"'where taskId='"+task.getTaskId()+"'");
+		sessionFactory.getCurrentSession().update(task);
 		return task;
+	}
+
+	@Override
+	public TaskIssue getIssueByTaskId(String taskId) {
+		TaskIssue entity = sessionFactory.getCurrentSession().get(TaskIssue.class, taskId);
+
+		return entity;
+	}
+
+	@Override
+	public List<TaskIssue> getAllDoneTask() {
+		try {
+
+			List<TaskIssue> taskList = (List<TaskIssue>) sessionFactory.getCurrentSession()
+					.createQuery("From TaskIssue task where task.issueStatus='Done'").list();
+			return taskList;
+		} catch (Exception e) {
+			return null;
+		}
 	}
 
 }

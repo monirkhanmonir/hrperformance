@@ -28,9 +28,27 @@
 					<h4 class="modal-title">Login Here</h4>
 				</div>
 				<div class="modal-body">
-					<h1>Login</h1>
+					<!-- <div class="modal-body">
+						<div class="login px-4 py-4 mx-auto mw-100">
+							<h5 class="text-center mb-4">Login Now</h5>
+							<form name='f' action="login" method='POST'>
+								<div class="form-group">
+									<p class="mb-2">Email address</p>
+									<input type='text' name='username' class="form-control"
+										 placeholder="" required="">
+								</div>
+								<div class="form-group">
+									<p class="mb-2">Password</p>
+									<input type='password' name='password' class="form-control"
+										 placeholder="" required="">
+								</div>
+							
+								<button type="submit" class="btn submit">Sign In</button>
+							</form> 
+						</div>
+					</div> -->
 
-					<form name='f' action="login" method='POST'>
+					 <form name='f' action="login" method='POST'>
 						<div class="form-group">
 							 <input type='text' name='username' value=''
 									class="form-control" placeholder="User Name">
@@ -46,7 +64,7 @@
 									class="btn btn-success form-control" />
 							
 						</div>					
-					</form>
+					</form> 
 				</div>
 
 			</div>

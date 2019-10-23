@@ -32,8 +32,17 @@ public class TaskIssueImpService implements TaskIssueInterFService{
 	}
 	@Override
 	public TaskIssue taskEmpUpdate(TaskIssue task) {
-		TaskIssueInterF.taskEmpUpdate(task);
-		return task;
+		
+		return TaskIssueInterF.taskEmpUpdate(task);
+	}
+	@Override
+	public TaskIssue getIssueByTaskId(String taskId) {
+		return TaskIssueInterF.getIssueByTaskId(taskId);
+	}
+	@Override
+	public List<TaskIssue> getAllDoneTask() {
+		
+		return TaskIssueInterF.getAllDoneTask();
 	}
 
 }

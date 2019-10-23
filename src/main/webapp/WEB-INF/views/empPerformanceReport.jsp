@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <jsp:include page="header.jsp"></jsp:include>
 <div class="inner_page-banner one-img"></div>
 <!-- short -->
@@ -24,41 +25,52 @@
 
 
 					<div class="card" ng-app="myApp" ng-controller="myCtrl">
-						<div class="card-header">Featured {{msg}}</div>
+						<div class="card-header">Featured</div>
 						<div class="card-body">
-							<button class="btn" ng-click="getTask()">Test</button>
+
+
+							<div class="alert alert-primary" role="alert">
+								<p>Employee task Feedback Information</p>
+							</div>
+
+							<table class="table table-bordered table-sm">
+								<tr>
+
+									<th><b>Task Name:</b></th>
+									<td>
+											<select>
+											<c:forEach var="task" items="${taskEntity}">
+												<option value="${task.taskId}">${task.taskName}</option>
+												</c:forEach>
+											</select>
+
+										</td>
+									<th><b>Task Id: </b></th>
+									<td><input type="text" class="form-control"></td>
+								</tr>
+								<tr>
+									<th><b>Job Title: </b></th>
+									<td></td>
+									<th><b>Date:</b></th>
+									<td></td>
+								</tr>
+								<tr>
+									<th><b>Department: </b></th>
+									<td></td>
+									<th><b>Manager:</b></th>
+									<td></td>
+								</tr>
+								<tr>
+									<th><b>Review Periode: </b></th>
+									<td></td>
+									<th><b>Date:</b></th>
+									<td></td>
+								</tr>
+
+							</table>
+
+
 							<form>
-								<div class="alert alert-primary" role="alert">
-									<p>Employee task Feedback Information</p>
-								</div>
-								<table class="table table-bordered table-sm">
-									<tr>
-										<th><b>Task Id: </b></th>
-										<td><input type="text" class="form-control"></td>
-										<th><b>Task Name:</b></th>
-										<td><input type="int" class="form-control"></td>
-									</tr>
-									<tr>
-										<th><b>Job Title: </b></th>
-										<td></td>
-										<th><b>Date:</b></th>
-										<td></td>
-									</tr>
-									<tr>
-										<th><b>Department: </b></th>
-										<td></td>
-										<th><b>Manager:</b></th>
-										<td></td>
-									</tr>
-									<tr>
-										<th><b>Review Periode: </b></th>
-										<td></td>
-										<th><b>Date:</b></th>
-										<td></td>
-									</tr>
-
-								</table>
-
 								<div class="alert alert-primary" role="alert">
 									<h5>Employee Performance Ratings</h5>
 								</div>
@@ -78,32 +90,33 @@
 										<tr>
 											<th colspan="5">Job Knowledge</th>
 											<td><input type="radio" value="1" name="jobKnowledge"
-												ng-model="jobKnowledge"></td>
+												ng-model="jobKnowledge" ng-click="add()"></td>
 											<td><input type="radio" value="2" name="jobKnowledge"
-												ng-model="jobKnowledge"></td>
+												ng-model="jobKnowledge" ng-click="add()"></td>
 											<td><input type="radio" value="3" name="jobKnowledge"
-												ng-model="jobKnowledge"></td>
+												ng-model="jobKnowledge" ng-click="add()"></td>
 											<td><input type="radio" value="4" name="jobKnowledge"
-												ng-model="jobKnowledge"></td>
+												ng-model="jobKnowledge" ng-click="add()"></td>
 											<td><input type="radio" value="5" name="jobKnowledge"
-												ng-model="jobKnowledge"></td>
+												ng-model="jobKnowledge" ng-click="add()"></td>
 										</tr>
 										<tr>
 											<th colspan="5">Comment:</th>
-											<td colspan="5"><input type="text" class="form-control" ng-model="comment">{{jobKnowledge}}</td>
+											<td colspan="5"><input type="text" class="form-control"
+												ng-model="comment"></td>
 										</tr>
 										<tr>
 											<th colspan="5">Work Quality</th>
 											<td><input type="radio" value="1" name="workquality"
-												ng-model="workquality"></td>
+												ng-model="workquality" ng-click="add()"></td>
 											<td><input type="radio" value="2" name="workquality"
-												ng-model="workquality"></td>
+												ng-model="workquality" ng-click="add()"></td>
 											<td><input type="radio" value="3" name="workquality"
-												ng-model="workquality"></td>
+												ng-model="workquality" ng-click="add()"></td>
 											<td><input type="radio" value="4" name="workquality"
-												ng-model="workquality"></td>
+												ng-model="workquality" ng-click="add()"></td>
 											<td><input type="radio" value="5" name="workquality"
-												ng-model="workquality"></td>
+												ng-model="workquality" ng-click="add()"></td>
 										</tr>
 										<tr>
 											<th colspan="5">Comment:</th>
@@ -112,15 +125,15 @@
 										<tr>
 											<th colspan="5">Attendance/Punctuality</th>
 											<td><input type="radio" value="1" name="attendance"
-												ng-model="attendance"></td>
+												ng-model="attendance" ng-click="add()"></td>
 											<td><input type="radio" value="2" name="attendance"
-												ng-model="attendance"></td>
+												ng-model="attendance" ng-click="add()"></td>
 											<td><input type="radio" value="3" name="attendance"
-												ng-model="attendance"></td>
+												ng-model="attendance" ng-click="add()"></td>
 											<td><input type="radio" value="4" name="attendance"
-												ng-model="attendance"></td>
+												ng-model="attendance" ng-click="add()"></td>
 											<td><input type="radio" value="5" name="attendance"
-												ng-model="attendance"></td>
+												ng-model="attendance" ng-click="add()"></td>
 										</tr>
 										<tr>
 											<th colspan="5">Comment:</th>
@@ -129,15 +142,15 @@
 										<tr>
 											<th colspan="5">Productivity</th>
 											<td><input type="radio" value="1" name="productivity"
-												ng-model="productivity"></td>
+												ng-model="productivity" ng-click="add()"></td>
 											<td><input type="radio" value="2" name="productivity"
-												ng-model="productivity"></td>
+												ng-model="productivity" ng-click="add()"></td>
 											<td><input type="radio" value="3" name="productivity"
-												ng-model="productivity"></td>
+												ng-model="productivity" ng-click="add()"></td>
 											<td><input type="radio" value="4" name="productivity"
-												ng-model="productivity"></td>
+												ng-model="productivity" ng-click="add()"></td>
 											<td><input type="radio" value="5" name="productivity"
-												ng-model="productivity"></td>
+												ng-model="productivity" ng-click="add()"></td>
 										</tr>
 										<tr>
 											<th colspan="5">Comment:</th>
@@ -146,15 +159,20 @@
 										<tr>
 											<th colspan="5">Communication/Listening Skills</th>
 											<td><input type="radio" value="1"
-												name="communicationSkills" ng-model="communicationSkills"></td>
+												name="communicationSkills" ng-model="communicationSkills"
+												ng-click="add()"></td>
 											<td><input type="radio" value="2"
-												name="communicationSkills" ng-model="communicationSkills"></td>
+												name="communicationSkills" ng-model="communicationSkills"
+												ng-click="add()"></td>
 											<td><input type="radio" value="3"
-												name="communicationSkills" ng-model="communicationSkills"></td>
+												name="communicationSkills" ng-model="communicationSkills"
+												ng-click="add()"></td>
 											<td><input type="radio" value="4"
-												name="communicationSkills" ng-model="communicationSkills"></td>
+												name="communicationSkills" ng-model="communicationSkills"
+												ng-click="add()"></td>
 											<td><input type="radio" value="5"
-												name="communicationSkills" ng-model="communicationSkills"></td>
+												name="communicationSkills" ng-model="communicationSkills"
+												ng-click="add()"></td>
 										</tr>
 										<tr>
 											<th colspan="5">Comment:</th>
@@ -163,15 +181,15 @@
 										<tr>
 											<th colspan="5">Dependability</th>
 											<td><input type="radio" value="1" name="dependability"
-												ng-model="dependability"></td>
+												ng-model="dependability" ng-click="add()"></td>
 											<td><input type="radio" value="2" name="dependability"
-												ng-model="dependability"></td>
+												ng-model="dependability" ng-click="add()"></td>
 											<td><input type="radio" value="3" name="dependability"
-												ng-model="dependability"></td>
+												ng-model="dependability" ng-click="add()"></td>
 											<td><input type="radio" value="4" name="dependability"
-												ng-model="dependability"></td>
+												ng-model="dependability" ng-click="add()"></td>
 											<td><input type="radio" value="5" name="dependability"
-												ng-model="dependability"></td>
+												ng-model="dependability" ng-click="add()"></td>
 										</tr>
 										<tr>
 											<th colspan="5">Comment:</th>
@@ -181,7 +199,7 @@
 											<th colspan="5" class="font-weight-bold text-primary">Overall
 												Rating:</th>
 											<td colspan="5"><input type="text" class="form-control"
-												readonly="readonly" >{{overallRating}}</td>
+												readonly="readonly" value="Total Scote: {{overall}}"></td>
 										</tr>
 									</tbody>
 								</table>

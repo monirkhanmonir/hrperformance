@@ -1,6 +1,27 @@
-app.controller("myCtrl",function($scope){
+app.controller("myCtrl",function($scope,$http){
 	
-	$scope.msg = "test";
+
+	$scope.jobKnowledge= undefined || 0;
+	$scope.workquality= undefined || 0;
+	$scope.attendance= undefined || 0;
+	$scope.productivity=undefined || 0;
+	$scope.communicationSkills= undefined || 0;
+	$scope.dependability= undefined || 0;
+	$scope.overall = 0;
+	
+	$scope.add = function(){
+		var jk = Number(this.jobKnowledge);
+		var wq = Number(this.workquality);
+		var atd = Number(this.attendance);
+		var pdt = Number(this.productivity);
+		var cs = Number(this.communicationSkills);
+		var dp = Number(this.dependability);
+		this.overall = jk+wq+atd+pdt+cs+dp;
+	}
+	
+	
+	/*$scope.overallRating=$scope.jobKnowledge+$scope.workquality;*/
+	
 	
 	//showEmployee();
 	
@@ -16,6 +37,8 @@ app.controller("myCtrl",function($scope){
 	
 	
 	
+	
+
 	$scope.getTask =  function () {
 		console.log("call")
 	        $http.get('/taskissue/onGoingTask')
@@ -28,6 +51,6 @@ app.controller("myCtrl",function($scope){
 	            console.log(err);
 	        });
 	    };
-	
+
 	
 });
