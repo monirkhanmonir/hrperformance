@@ -26,31 +26,31 @@
 						<div class="form-row">
 							<div class="form-group col-md-6">
 								<label for="inputEmail4">Task Id:</label> <input type="text"
-									class="form-control" id="inputEmail4" name="taskId">
+									class="form-control" id="inputEmail4" name="taskId" value="${editTask.taskId}">
 							</div>
 							<div class="form-group col-md-6">
 								<label for="inputEmail4">Employee Id:</label> <input
 									type="number" class="form-control" id="inputEmail4"
-									name="empId">
+									name="empId" value="${editTask.empId}">
 							</div>
 						</div>
 
 						<div class="form-row">
 							<div class="form-group col-md-6">
 								<label for="inputEmail4">Task Name:</label> <input type="text"
-									class="form-control" id="inputEmail4" name="taskName">
+									class="form-control" id="inputEmail4" name="taskName" value="${editTask.taskName}">
 							</div>
 							<div class="form-group col-md-6">
 								<label for="inputEmail4">Task Unit:</label> <input
 									type="number" class="form-control" id="inputEmail4"
-									name="taskUnit">
+									name="taskUnit" value="${editTask.taskUnit}">
 							</div>
 						</div>
 
 						<div class="form-row">
 							<div class="form-group col-md-12">
 								<label for="inputEmail4">Assign Name:</label> <select
-									class="form-control" name="assignName">
+									class="form-control" name="assignName" value="${editTask.assignName}">
 									<option>Select One</option>
 									<option value="Manager">Manager</option>
 									<option value="Hr">HR</option>
@@ -62,25 +62,25 @@
 						<div class="form-row">
 							<div class="form-group col-md-6">
 								<label>Issue Date: </label> <input type="date"
-									class="form-control" name="issueDate">
+									class="form-control" name="issueDate" value="${editTask.issueDate}">
 							</div>
 							<div class="form-group col-md-6">
 								<label>Restriction Date: </label> <input type="date"
-									class="form-control" name="restrictionDate">
+									class="form-control" name="restrictionDate"  value="${editTask.restrictionDate}">
 							</div>
 						</div>
 
 						<div class="form-row">
 							<div class="form-group col-md-6">
 								<label>Issue Status: </label> <select class="form-control"
-									name="issueStatus">
+									name="issueStatus"  value="${editTask.issueStatus}">
 									<option>Select Status</option>
 									<option value="Begin">On going</option>
 								</select>
 							</div>
 							<div class="form-group col-md-6">
 								<label>Priority: </label> <select class="form-control"
-									name="issuePriority">
+									name="issuePriority" value="${editTask.issuePriority}">
 									<option>Select One</option>
 									<option value="Urgent">Urgent</option>
 									<option value="Normal">Normal</option>
@@ -91,7 +91,7 @@
 
 						<div class="form-group">
 							<label for="inputAddress">Remark:</label>
-							<textarea rows="" cols="" class="form-control" name="ramark"></textarea>
+							<textarea rows="" cols="" class="form-control" name="ramark" value="${editTask.ramark}"></textarea>
 						</div>
 
 

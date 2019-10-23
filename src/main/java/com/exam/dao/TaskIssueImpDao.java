@@ -6,6 +6,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.exam.model.EmpRating;
 import com.exam.model.Employee;
 import com.exam.model.TaskIssue;
 
@@ -33,9 +34,6 @@ public class TaskIssueImpDao implements TaskIssueInterFDao {
 
 			List<TaskIssue> taskList = (List<TaskIssue>) sessionFactory.getCurrentSession()
 					.createQuery("From TaskIssue").list();
-			// List<TaskIssue> taskList = (List<TaskIssue>)
-			// sessionFactory.getCurrentSession().createQuery("From TaskIssue task where
-			// task.issueStatus='Done'").list();
 			return taskList;
 		} catch (Exception e) {
 			return null;
@@ -75,6 +73,23 @@ public class TaskIssueImpDao implements TaskIssueInterFDao {
 		} catch (Exception e) {
 			return null;
 		}
+	}
+
+	@Override
+	public EmpRating storePerformanceRating(EmpRating rating) {
+		try {
+		sessionFactory.getCurrentSession().saveOrUpdate(rating);
+		return(rating);
+		} catch (Exception e) {
+			return null;
+		}
+		
+	}
+
+	@Override
+	public TaskIssue getIssueByIdForEdit(String id) {
+		
+		return sessionFactory.getCurrentSession().get(TaskIssue.class, id);
 	}
 
 }

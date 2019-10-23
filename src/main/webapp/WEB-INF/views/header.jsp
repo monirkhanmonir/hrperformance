@@ -86,7 +86,7 @@
 								<a class="nav-link " href="/employee/showAllEmployee">All
 									Employee</a>
 									 <a href="/employee/transfer" class="nav-link">Issue Task</a>
-								<a href="/employee/empPerformance" class="nav-link">Performance Report</a> 
+								<a href="/performance/ratingRecord" class="nav-link">Performance Report</a> 
 								<a href="/employee/appraisal" class="nav-link">Appraisal</a>
 							</div></li>
 						<li class="nav-item"><a href="/contactus" class="nav-link">Contact</a>

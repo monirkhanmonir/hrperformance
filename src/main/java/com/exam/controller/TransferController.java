@@ -99,6 +99,21 @@ public class TransferController {
 	}
 	
 	
+	@GetMapping(value = "/editTask/{id}")
+	public ModelAndView taskEdit(@PathVariable ("id") String id,Map<String, Object> map) {
+		map.put("editTask",taskIssueInterFService.getIssueByIdForEdit(id));
+		System.out.println(taskIssueInterFService.getIssueByIdForEdit(id).getAssignName());
+		return new ModelAndView("/transfer",map);
+	}
+	
+	
+	@GetMapping(value = "/deleteTask/{id}")
+	public ModelAndView deleteTaskIssue(@PathVariable("id") String id) {
+		System.err.println(id);
+		return null;
+	}
+	
+	
 	
 
 }

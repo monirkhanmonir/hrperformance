@@ -32,45 +32,42 @@
 							<div class="alert alert-primary" role="alert">
 								<p>Employee task Feedback Information</p>
 							</div>
+							<form action="/performance/storeRating" method="post">
+								<table class="table table-bordered table-sm">
+									<tr>
 
-							<table class="table table-bordered table-sm">
-								<tr>
-
-									<th><b>Task Name:</b></th>
-									<td>
-											<select>
-											<c:forEach var="task" items="${taskEntity}">
-												<option value="${task.taskId}">${task.taskName}</option>
+										<th><b>Task Name:</b></th>
+										<td><select class="form-control" name="taskId">
+												<c:forEach var="task" items="${taskEntity}">
+													<option value="${task.taskId}">${task.taskName}</option>
 												</c:forEach>
-											</select>
+										</select></td>
+										<th><b>Task Id: </b></th>
+										<td><input type="text" class="form-control"></td>
+									</tr>
+									<tr>
+										<th><b>Job Title: </b></th>
+										<td></td>
+										<th><b>Date:</b></th>
+										<td></td>
+									</tr>
+									<tr>
+										<th><b>Department: </b></th>
+										<td></td>
+										<th><b>Manager:</b></th>
+										<td></td>
+									</tr>
+									<tr>
+										<th><b>Review Periode: </b></th>
+										<td></td>
+										<th><b>Date:</b></th>
+										<td></td>
+									</tr>
 
-										</td>
-									<th><b>Task Id: </b></th>
-									<td><input type="text" class="form-control"></td>
-								</tr>
-								<tr>
-									<th><b>Job Title: </b></th>
-									<td></td>
-									<th><b>Date:</b></th>
-									<td></td>
-								</tr>
-								<tr>
-									<th><b>Department: </b></th>
-									<td></td>
-									<th><b>Manager:</b></th>
-									<td></td>
-								</tr>
-								<tr>
-									<th><b>Review Periode: </b></th>
-									<td></td>
-									<th><b>Date:</b></th>
-									<td></td>
-								</tr>
-
-							</table>
+								</table>
 
 
-							<form>
+
 								<div class="alert alert-primary" role="alert">
 									<h5>Employee Performance Ratings</h5>
 								</div>
@@ -103,7 +100,7 @@
 										<tr>
 											<th colspan="5">Comment:</th>
 											<td colspan="5"><input type="text" class="form-control"
-												ng-model="comment"></td>
+												ng-model="comment" name="jobKnowledgeCmnt"></td>
 										</tr>
 										<tr>
 											<th colspan="5">Work Quality</th>
@@ -120,7 +117,8 @@
 										</tr>
 										<tr>
 											<th colspan="5">Comment:</th>
-											<td colspan="5"><input type="text" class="form-control"></td>
+											<td colspan="5"><input type="text" class="form-control"
+												name="workqualityCmnt"></td>
 										</tr>
 										<tr>
 											<th colspan="5">Attendance/Punctuality</th>
@@ -137,7 +135,8 @@
 										</tr>
 										<tr>
 											<th colspan="5">Comment:</th>
-											<td colspan="5"><input type="text" class="form-control"></td>
+											<td colspan="5"><input type="text" class="form-control"
+												name="attendanceCmnt"></td>
 										</tr>
 										<tr>
 											<th colspan="5">Productivity</th>
@@ -154,7 +153,8 @@
 										</tr>
 										<tr>
 											<th colspan="5">Comment:</th>
-											<td colspan="5"><input type="text" class="form-control"></td>
+											<td colspan="5"><input type="text" class="form-control"
+												name="productivityCmnt"></td>
 										</tr>
 										<tr>
 											<th colspan="5">Communication/Listening Skills</th>
@@ -176,7 +176,8 @@
 										</tr>
 										<tr>
 											<th colspan="5">Comment:</th>
-											<td colspan="5"><input type="text" class="form-control"></td>
+											<td colspan="5"><input type="text" class="form-control"
+												name="communicationSkillsCmnt"></td>
 										</tr>
 										<tr>
 											<th colspan="5">Dependability</th>
@@ -193,13 +194,14 @@
 										</tr>
 										<tr>
 											<th colspan="5">Comment:</th>
-											<td colspan="5"><input type="text" class="form-control"></td>
+											<td colspan="5"><input type="text" class="form-control"
+												name="dependabilityCmnt"></td>
 										</tr>
 										<tr>
 											<th colspan="5" class="font-weight-bold text-primary">Overall
 												Rating:</th>
 											<td colspan="5"><input type="text" class="form-control"
-												readonly="readonly" value="Total Scote: {{overall}}"></td>
+												readonly="readonly" value="{{overall}}" name="overallRating"></td>
 										</tr>
 									</tbody>
 								</table>
@@ -208,7 +210,8 @@
 								</div>
 								<div class="form-group">
 									<label>ADDITIONAL COMMENTS</label>
-									<textarea rows="" cols="" class="form-control"></textarea>
+									<textarea rows="" cols="" class="form-control"
+										name="additionalCmnt"></textarea>
 								</div>
 
 								<button type="submit" class="btn btn-primary">Submit</button>

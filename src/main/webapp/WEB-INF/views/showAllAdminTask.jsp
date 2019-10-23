@@ -28,6 +28,8 @@
 		<th>Issue Status</th>
 		<th>Priority</th>
 		<th>Remark</th>
+		<th>Finish Date</th>
+		<th>Action</th>
 	</tr>
 	<c:forEach var="task" items="${taskEntity}">
 		<tr>
@@ -40,7 +42,13 @@
 			<td>${task.restrictionDate}</td>
 			<td>${task.issueStatus}</td>
 			<td>${task.issuePriority}</td>
-		
+			<td>${task.ramark}</td>
+			<td>${task.finishDate}</td>
+			<td>
+			<a href="/employee/editTask/${task.taskId}" class="btn btn-success"><i class="fa fa-edit"></i</a>
+			<a href="/employee/deleteTask/${task.taskId}" class="btn btn-danger">Delete</a>
+				
+			</td>
 		</tr>
 
 

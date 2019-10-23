@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.exam.dao.TaskIssueInterFDao;
+import com.exam.model.EmpRating;
 import com.exam.model.TaskIssue;
 
 @Service
@@ -43,6 +44,16 @@ public class TaskIssueImpService implements TaskIssueInterFService{
 	public List<TaskIssue> getAllDoneTask() {
 		
 		return TaskIssueInterF.getAllDoneTask();
+	}
+	@Override
+	public EmpRating storePerformanceRating(EmpRating rating) {
+		
+		return TaskIssueInterF.storePerformanceRating(rating);
+	}
+	@Override
+	public TaskIssue getIssueByIdForEdit(String id) {
+		
+		return TaskIssueInterF.getIssueByIdForEdit(id);
 	}
 
 }
