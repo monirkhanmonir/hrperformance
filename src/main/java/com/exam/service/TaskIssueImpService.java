@@ -55,5 +55,10 @@ public class TaskIssueImpService implements TaskIssueInterFService{
 		
 		return TaskIssueInterF.getIssueByIdForEdit(id);
 	}
+	@Override
+	public boolean deleteTask(String id) {
+		
+		return TaskIssueInterF.deleteTask(id);
+	}
 
 }

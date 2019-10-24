@@ -2,6 +2,7 @@ package com.exam.dao;
 
 import java.util.List;
 
+import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -90,6 +91,19 @@ public class TaskIssueImpDao implements TaskIssueInterFDao {
 	public TaskIssue getIssueByIdForEdit(String id) {
 		
 		return sessionFactory.getCurrentSession().get(TaskIssue.class, id);
+	}
+
+	@Override
+	public boolean deleteTask(String id) {
+		try {
+			TaskIssue task = sessionFactory.getCurrentSession().get(TaskIssue.class, id);
+			sessionFactory.getCurrentSession().delete(task);
+			return true;
+		} catch (HibernateException e) {
+			return false;
+		}
+		
+	
 	}
 
 }

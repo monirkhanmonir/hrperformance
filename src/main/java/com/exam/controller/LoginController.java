@@ -53,6 +53,8 @@ public class LoginController {
 		List<GrantedAuthority> roles = (List<GrantedAuthority>) authentication.getAuthorities();
 		if(roles.get(0).getAuthority().equalsIgnoreCase("ADMIN")) {
 			return new ModelAndView("home");
+		}else if(roles.get(0).getAuthority().equalsIgnoreCase("about")){
+			return new ModelAndView("Employee");
 		}else {
 			return new ModelAndView("login");
 		}

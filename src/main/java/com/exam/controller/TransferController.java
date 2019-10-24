@@ -109,9 +109,12 @@ public class TransferController {
 	
 	@GetMapping(value = "/deleteTask/{id}")
 	public ModelAndView deleteTaskIssue(@PathVariable("id") String id) {
-		System.err.println(id);
-		return null;
+		taskIssueInterFService.deleteTask(id);
+		return new ModelAndView("redirect:/employee/showAllTask");
 	}
+	
+	
+	
 	
 	
 	

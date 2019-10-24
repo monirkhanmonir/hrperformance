@@ -14,4 +14,5 @@ public interface TaskIssueInterFService {
 	public TaskIssue getIssueByTaskId(String taskId);
 	public EmpRating storePerformanceRating(EmpRating rating);
 	public TaskIssue getIssueByIdForEdit(String id);
+	public boolean deleteTask(String id);
 }

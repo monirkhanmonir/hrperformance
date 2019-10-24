@@ -10,4 +10,6 @@ public class empReportController {
 	public ModelAndView getEmpReportPage() {
 		return new ModelAndView("empReport");
 	}
+	
+	
 }

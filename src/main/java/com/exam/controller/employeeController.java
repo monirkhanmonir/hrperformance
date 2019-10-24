@@ -64,9 +64,7 @@ public class employeeController {
 	}
 	
 	@RequestMapping(value = "/editemppage")
-	public ModelAndView showeditpage() {
-		
-		
+	public ModelAndView showeditpage() {	
 		return new ModelAndView("/editemployee");
 	}
 	

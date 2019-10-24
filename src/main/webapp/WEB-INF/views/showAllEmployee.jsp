@@ -101,9 +101,9 @@
 
 							<div class="row wls-contact-mid">
 								<div class="col-md-6 col-sm-6 ">
-									<span>Gender:</span> <input type="radio" value="Male"
-										name="gender">Male <input type="radio" value="Female"
-										name="gender">Female <input type="radio" value="Other"
+									<span>Role:</span> <input type="radio" value="Admin"
+										name="gender">Admin <input type="radio" value="Employee"
+										name="gender">Employee <input type="radio" value="Other"
 										name="gender">Other
 								</div>
 								<div class="col-md-6 col-sm-6 form-group contact-forms">

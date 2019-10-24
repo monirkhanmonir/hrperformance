@@ -32,12 +32,12 @@
 							<div class="alert alert-primary" role="alert">
 								<p>Employee task Feedback Information</p>
 							</div>
-							<form action="/performance/storeRating" method="post">
+							<form action="/performance/storeRating" method="post" >
 								<table class="table table-bordered table-sm">
 									<tr>
 
 										<th><b>Task Name:</b></th>
-										<td><select class="form-control" name="taskId">
+										<td><select class="form-control" name="taskId" ng-model="taskId" ng-change="showTask()">
 												<c:forEach var="task" items="${taskEntity}">
 													<option value="${task.taskId}">${task.taskName}</option>
 												</c:forEach>

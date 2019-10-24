@@ -18,28 +18,10 @@ app.controller("myCtrl",function($scope,$http){
 		var dp = Number(this.dependability);
 		this.overall = jk+wq+atd+pdt+cs+dp;
 	}
-	
-	
-	/*$scope.overallRating=$scope.jobKnowledge+$scope.workquality;*/
-	
-	
-	//showEmployee();
-	
-	/*$scope.overallRating =$scope.jobKnowledge+$scope.workquality+$scope.attendance+$scope.productivity+$scope.communicationSkills+$scope.dependability;
-	
-	console.log(overallRating);*/
-/*	$scope.overallRating ="";
-	
-	$scope.overallRating = $scope.jobKnowledge;
-	
-	console.log($scope.jobKnowledge;t);
-	*/
-	
-	
-	
-	
 
-	$scope.getTask =  function () {
+
+	/*$scope.getTask =  function () {
+		alert();
 		console.log("call")
 	        $http.get('/taskissue/onGoingTask')
 	                .then(function (res) {
@@ -50,7 +32,24 @@ app.controller("myCtrl",function($scope,$http){
 	                }).catch(function (err) {
 	            console.log(err);
 	        });
-	    };
+	    };*/
+	    
+	    $scope.taskId = "";
+	    
+	    $scope.showTask = function(){
+	    	var THIS = this;
+	    	alert(this.taskId)
+	    	$http.get("/showtaskById/"+this.taskId)
+	    	.then(function(res){
+	    		if(res.status=='200'){
+
+
+	    		}
+	    		
+	    	}).catch(function(err){
+	    		console.log(err);
+	    	})
+	    }
 
 	
 });

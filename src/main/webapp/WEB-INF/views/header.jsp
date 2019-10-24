@@ -37,8 +37,9 @@
 	rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=Roboto:400,500"
 	rel="stylesheet">
+	<script src="/../assets/js/angular.min.js"></script>
 </head>
-<body>
+<body >
 	<div class="header-outs" id="header">
 		<!--banner -->
 		<div class="header-w3layouts">
@@ -72,7 +73,7 @@
 							aria-expanded="false"> Report </a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown1">
 								<a class="nav-link " href="/employee/showAllTask">Issue Task</a>
-								 <a href="" class="nav-link">Transfer</a>
+								 <a href="/employee/report" class="nav-link">Performance Report</a>
 								  <a href="" class="nav-link">Retirement</a>
 								<a href="" class="nav-link">Appraisal</a>
 							</div></li>
