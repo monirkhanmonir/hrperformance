@@ -69,7 +69,7 @@ public class TaskIssueImpDao implements TaskIssueInterFDao {
 		try {
 
 			List<TaskIssue> taskList = (List<TaskIssue>) sessionFactory.getCurrentSession()
-					.createQuery("From TaskIssue task where task.issueStatus='Done'").list();
+					.createQuery("From TaskIssue").list();
 			return taskList;
 		} catch (Exception e) {
 			return null;

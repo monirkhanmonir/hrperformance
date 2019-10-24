@@ -74,7 +74,7 @@
 							<div class="form-group col-md-6">
 								<label>Issue Status: </label> <select class="form-control"
 									name="issueStatus"  value="${editTask.issueStatus}">
-									<option>Select Status</option>
+
 									<option value="Begin">On going</option>
 								</select>
 							</div>

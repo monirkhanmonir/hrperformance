@@ -32,24 +32,27 @@
 							<div class="alert alert-primary" role="alert">
 								<p>Employee task Feedback Information</p>
 							</div>
-							<form action="/performance/storeRating" method="post" >
+							<form action="/performance/storeRating" method="post"
+								ng-app="myApp" ng-controller="myCtrl">
 								<table class="table table-bordered table-sm">
+
 									<tr>
 
-										<th><b>Task Name:</b></th>
-										<td><select class="form-control" name="taskId" ng-model="taskId" ng-change="showTask()">
-												<c:forEach var="task" items="${taskEntity}">
-													<option value="${task.taskId}">${task.taskName}</option>
+										<th><b>Employee Name:</b></th>
+										<td><select class="form-control" name="id" ng-model="id"
+											ng-change="showEmployee()">
+												<c:forEach var="employee" items="${employeeList}">
+													<option value="${employee.id}">${employee.empName}</option>
 												</c:forEach>
 										</select></td>
-										<th><b>Task Id: </b></th>
-										<td><input type="text" class="form-control"></td>
+										<th><b>Employee Id: </b></th>
+										<td>{{employee.id}}</td>
 									</tr>
 									<tr>
 										<th><b>Job Title: </b></th>
-										<td></td>
-										<th><b>Date:</b></th>
-										<td></td>
+										<td>{{employee.jobTitle}}</td>
+										<th><b>join Date:</b></th>
+										<td>{{employee.joinDate}}</td>
 									</tr>
 									<tr>
 										<th><b>Department: </b></th>

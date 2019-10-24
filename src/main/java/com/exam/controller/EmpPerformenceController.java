@@ -15,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.exam.model.EmpRating;
 import com.exam.model.TaskIssue;
+import com.exam.service.EmployeeServiceInterF;
 import com.exam.service.TaskIssueInterFService;
 
 @Controller
@@ -22,12 +23,15 @@ import com.exam.service.TaskIssueInterFService;
 public class EmpPerformenceController {
 	@Autowired
 	TaskIssueInterFService taskIssueInterFService;
+	@Autowired
+	EmployeeServiceInterF employeeServiceInterF;
+
 	@GetMapping(value = "/ratingRecord")
-	public ModelAndView getRetirementPage() {
-		Map<String, Object> task = new HashMap<>();		
-		List<TaskIssue> taskLsit = taskIssueInterFService.getAllDoneTask();
-		task.put("taskEntity", taskLsit);
-		return new ModelAndView("empPerformanceReport",task);
+	public ModelAndView getRetirementPage(Map<String, Object> map) {
+				
+		map.put("employeeList", employeeServiceInterF.getAll());
+		
+		return new ModelAndView("empPerformanceReport",map);
 	
 	}
 	

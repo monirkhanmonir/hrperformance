@@ -53,13 +53,11 @@
 
 
 				<td>
-				
 					<!-- <button class="btn btn-success" data-toggle="modal"
 						data-target="#exampleModal" >
 						<i class="fa fa-edit"></i>
-					</button> -->
-					
-					<a href="/employee/editemp/${employee.id}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+					</button> --> <a href="/employee/editemp/${employee.id}"
+					class="btn btn-primary"><i class="fa fa-edit"></i></a>
 					<button class="btn btn-danger">Delete</button>
 				</td>
 			</tr>
@@ -99,12 +97,40 @@
 								</div>
 							</div>
 
+							<div class="row agile-wls-contact-mid">
+								<div class="col-md-6 col-sm-6 form-group contact-forms">
+									<span>Date Of Birth</span> <input type="date"
+										class="form-control" placeholder="Date Of Birth" required=""
+										name="birthDate">
+								</div>
+								<div class="col-md-6 col-sm-6 form-group contact-forms">
+									<span>join Date</span> <input type="date" class="form-control"
+										placeholder="Join Date" required="" name="joinDate">
+								</div>
+							</div>
+
 							<div class="row wls-contact-mid">
 								<div class="col-md-6 col-sm-6 ">
-									<span>Role:</span> <input type="radio" value="Admin"
-										name="gender">Admin <input type="radio" value="Employee"
-										name="gender">Employee <input type="radio" value="Other"
+									<span>Gender:</span> <input type="radio" value="Male"
+										name="gender">Male <input type="radio" value="Female"
+										name="gender">Female <input type="radio" value="Other"
 										name="gender">Other
+								</div>
+								<div class="col-md-6 col-sm-6 ">
+									<span>Role:</span> <input type="radio" value="Admin"
+										name="role">Admin <input type="radio" value="HR"
+										name="role">HR <input type="radio" value="Employee"
+										name="role">Employee
+								</div>
+
+							</div>
+
+
+							<div class="row agile-wls-contact-mid">
+
+								<div class="col-md-6 col-sm-6 form-group contact-forms">
+									<input type="text" class="form-control" placeholder="User Name"
+										required="" name="username">
 								</div>
 								<div class="col-md-6 col-sm-6 form-group contact-forms">
 									<select class="form-control" name="jobTitle">
@@ -114,19 +140,6 @@
 										<option value="Seals Representative">Seals
 											Representative</option>
 									</select>
-								</div>
-							</div>
-
-							<div class="row agile-wls-contact-mid">
-
-								<div class="col-md-6 col-sm-6 form-group contact-forms">
-									<span>Date Of Birth</span> <input type="date"
-										class="form-control" placeholder="Date Of Birth" required=""
-										name="birthDate">
-								</div>
-								<div class="col-md-6 col-sm-6 form-group contact-forms">
-									<span>join Date</span> <input type="date" class="form-control"
-										placeholder="Join Date" required="" name="joinDate">
 								</div>
 							</div>
 

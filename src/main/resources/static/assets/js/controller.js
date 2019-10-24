@@ -20,36 +20,39 @@ app.controller("myCtrl",function($scope,$http){
 	}
 
 
-	/*$scope.getTask =  function () {
-		alert();
-		console.log("call")
-	        $http.get('/taskissue/onGoingTask')
-	                .then(function (res) {
-	                    if (res.status == '200') {
-	                    	console.log("accept")
-	                    //    $scope.onGoingTask = res.data;
-	                    }
-	                }).catch(function (err) {
-	            console.log(err);
-	        });
-	    };*/
+	
 	    
 	    $scope.taskId = "";
 	    
 	    $scope.showTask = function(){
 	    	var THIS = this;
-	    	alert(this.taskId)
+	    	
 	    	$http.get("/showtaskById/"+this.taskId)
 	    	.then(function(res){
 	    		if(res.status=='200'){
-
-
+	    			console.log(res);
+	    			$scope.task = res.data;
 	    		}
 	    		
 	    	}).catch(function(err){
 	    		console.log(err);
 	    	})
 	    }
+	    
+	    $scope.msg = "test";
+	    
+	    $scope.showEmployee= function(){
+	    
+	    	$http.get("/employee/getEmpById/"+this.id)
+	    	.then(function(res){
+	    		if(res.status=='200'){
+	    			$scope.employee = res.data;
+	    		}
+	    	}).catch(function(err){
+	    		console.log(err);
+	    	})
+	    }
+	    
 
 	
 });
