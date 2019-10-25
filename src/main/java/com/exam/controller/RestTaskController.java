@@ -41,9 +41,9 @@ public class RestTaskController {
 	
 	@RequestMapping(value = "/performance/report")
 	public List<EmpRating> getPerformanceReport() {
-		performanceRatingServiceInterF.getAllRating();
+	List<EmpRating> ratingList  = performanceRatingServiceInterF.getAllRating();
 		System.out.println("performance Accept");
-		return null;
+		return ratingList;
 	}
 	
 	

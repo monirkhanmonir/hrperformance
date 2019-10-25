@@ -21,8 +21,5 @@ public class PerformanceRatingEmpDao implements PerformanceRatingDaoInterF{
 			System.out.println("fail");
 		}
 		return ratingLest;
-	}
-
-	
-	
+	}	
 }

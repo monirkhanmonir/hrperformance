@@ -20,4 +20,5 @@ public class HomeController {
 	public ModelAndView getContactPage() {
 		return new ModelAndView("contactus");
 	}
+	
 }

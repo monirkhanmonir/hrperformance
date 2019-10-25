@@ -1,5 +1,6 @@
 app.controller("myCtrl",function($scope,$http){
-	
+	showPerformanceReport();
+	$scope.rowLimit = 5;
 
 	$scope.jobKnowledge= undefined || 0;
 	$scope.workquality= undefined || 0;
@@ -53,14 +54,32 @@ app.controller("myCtrl",function($scope,$http){
 	    	})
 	    }
 	    $scope.msg = "test";
-	    $scope.showPerformanceReport = function(){
+
+function showPerformanceReport(){
+	    
 	    	$http.get("/performance/report")
 	    	.then(function(res){
-	    		console.log(res);
+	    		if(res.status=='200'){
+	    			$scope.ratingList = res.data;	
+	    		console.log($scope.ratingList);
+	    		}
 	    	}).catch(function(err){
 	    		connsole.log(err);
 	    	})
 	    }
+
+
+	$scope.sortColmn = "name";
+	$scope.reverseSort = false;
+	$scope.sortData = function(column){
+		$scope.reverseSort = ($scope.sortColmn == column)? !$scope.reverseSort:false;
+		$scope.sortColmn = column;
+	}
+	$scope.gateSortClass = function(column){
+		if($scope.sortColmn==column){
+			return	$scope.reverseSort ? 'arrow-down':'arrow-up'
+		}
+	}
 	    
 
 	

@@ -37,9 +37,27 @@
 	rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=Roboto:400,500"
 	rel="stylesheet">
-	<script src="/../assets/js/angular.min.js"></script>
+<script src="/../assets/js/angular.min.js"></script>
+
+<style type="text/css">
+.arrow-down {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid red;
+}
+
+.arrow-up {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid red;
+}
+</style>
 </head>
-<body >
+<body>
 	<div class="header-outs" id="header">
 		<!--banner -->
 		<div class="header-w3layouts">
@@ -73,9 +91,9 @@
 							aria-expanded="false"> Report </a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown1">
 								<a class="nav-link " href="/employee/showAllTask">Issue Task</a>
-								 <a href="/performance/reportpage" class="nav-link">Performance Report</a>
-								  <a href="" class="nav-link">Retirement</a>
-								<a href="" class="nav-link">Appraisal</a>
+								<a href="/performance/reportpage" class="nav-link">Performance
+									Report</a> <a href="" class="nav-link">Retirement</a> <a href=""
+									class="nav-link">Appraisal</a>
 							</div></li>
 
 
@@ -85,10 +103,9 @@
 							aria-expanded="false"> Record </a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class="nav-link " href="/employee/showAllEmployee">All
-									Employee</a>
-									 <a href="/employee/transfer" class="nav-link">Issue Task</a>
-								<a href="/performance/ratingRecord" class="nav-link">Performance Report</a> 
-								<a href="/task/status" class="nav-link">Task Status</a>
+									Employee</a> <a href="/employee/transfer" class="nav-link">Issue
+									Task</a> <a href="/performance/ratingRecord" class="nav-link">Performance
+									Report</a> <a href="/task/status" class="nav-link">Task Status</a>
 							</div></li>
 						<li class="nav-item"><a href="/contactus" class="nav-link">Contact</a>
 						</li>
