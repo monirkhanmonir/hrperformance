@@ -10,7 +10,14 @@ public class EmpRating {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int ratingId;
-	public String taskId;
+	public int empId;
+	public String ratingDate;
+	public String getRatingDate() {
+		return ratingDate;
+	}
+	public void setRatingDate(String ratingDate) {
+		this.ratingDate = ratingDate;
+	}
 	public String jobKnowledge;
 	public String jobKnowledgeCmnt;
 	public String workquality;
@@ -25,11 +32,19 @@ public class EmpRating {
 	public String dependabilityCmnt;
 	public String overallRating;
 	public String additionalCmnt;
-	public String getTaskId() {
-		return taskId;
+
+	public int getRatingId() {
+		return ratingId;
 	}
-	public void setTaskId(String taskId) {
-		this.taskId = taskId;
+	public void setRatingId(int ratingId) {
+		this.ratingId = ratingId;
+	}
+	
+	public int getEmpId() {
+		return empId;
+	}
+	public void setEmpId(int empId) {
+		this.empId = empId;
 	}
 	public String getJobKnowledge() {
 		return jobKnowledge;
@@ -117,15 +132,16 @@ public class EmpRating {
 	}
 	@Override
 	public String toString() {
-		return "EmpRating [taskId=" + taskId + ", jobKnowledge=" + jobKnowledge + ", jobKnowledgeCmnt="
-				+ jobKnowledgeCmnt + ", workquality=" + workquality + ", workqualityCmnt=" + workqualityCmnt
-				+ ", attendance=" + attendance + ", attendanceCmnt=" + attendanceCmnt + ", productivity=" + productivity
-				+ ", productivityCmnt=" + productivityCmnt + ", communicationSkills=" + communicationSkills
-				+ ", communicationSkillsCmnt=" + communicationSkillsCmnt + ", dependability=" + dependability
-				+ ", dependabilityCmnt=" + dependabilityCmnt + ", overallRating=" + overallRating + ", additionalCmnt="
-				+ additionalCmnt + "]";
+		return "EmpRating [ratingId=" + ratingId + ", empId=" + empId + ", jobKnowledge=" + jobKnowledge
+				+ ", jobKnowledgeCmnt=" + jobKnowledgeCmnt + ", workquality=" + workquality + ", workqualityCmnt="
+				+ workqualityCmnt + ", attendance=" + attendance + ", attendanceCmnt=" + attendanceCmnt
+				+ ", productivity=" + productivity + ", productivityCmnt=" + productivityCmnt + ", communicationSkills="
+				+ communicationSkills + ", communicationSkillsCmnt=" + communicationSkillsCmnt + ", dependability="
+				+ dependability + ", dependabilityCmnt=" + dependabilityCmnt + ", overallRating=" + overallRating
+				+ ", additionalCmnt=" + additionalCmnt + "]";
 	}
-	
+
+
 	
 	
 }

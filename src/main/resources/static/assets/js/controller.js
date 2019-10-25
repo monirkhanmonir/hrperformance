@@ -39,7 +39,7 @@ app.controller("myCtrl",function($scope,$http){
 	    	})
 	    }
 	    
-	    $scope.msg = "test";
+	  
 	    
 	    $scope.showEmployee= function(){
 	    
@@ -50,6 +50,15 @@ app.controller("myCtrl",function($scope,$http){
 	    		}
 	    	}).catch(function(err){
 	    		console.log(err);
+	    	})
+	    }
+	    $scope.msg = "test";
+	    $scope.showPerformanceReport = function(){
+	    	$http.get("/performance/report")
+	    	.then(function(res){
+	    		console.log(res);
+	    	}).catch(function(err){
+	    		connsole.log(err);
 	    	})
 	    }
 	    

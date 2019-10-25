@@ -111,12 +111,6 @@ public class TransferController {
 	public ModelAndView deleteTaskIssue(@PathVariable("id") String id) {
 		taskIssueInterFService.deleteTask(id);
 		return new ModelAndView("redirect:/employee/showAllTask");
-	}
-	
-	
-	
-	
-	
-	
+	}	
 
 }

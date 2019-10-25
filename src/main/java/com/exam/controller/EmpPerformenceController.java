@@ -1,7 +1,5 @@
 package com.exam.controller;
 
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,10 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.exam.model.EmpRating;
-import com.exam.model.TaskIssue;
 import com.exam.service.EmployeeServiceInterF;
+import com.exam.service.PerformanceRatingServiceInterF;
 import com.exam.service.TaskIssueInterFService;
 
 @Controller
@@ -25,6 +22,8 @@ public class EmpPerformenceController {
 	TaskIssueInterFService taskIssueInterFService;
 	@Autowired
 	EmployeeServiceInterF employeeServiceInterF;
+	@Autowired
+	PerformanceRatingServiceInterF performanceRatingServiceInterF;
 
 	@GetMapping(value = "/ratingRecord")
 	public ModelAndView getRetirementPage(Map<String, Object> map) {
@@ -38,7 +37,7 @@ public class EmpPerformenceController {
 	@PostMapping(value = "/storeRating")
 	public ModelAndView storeRating(HttpServletRequest req, Map<String, Object> map) {
 		EmpRating rating  = new EmpRating();
-		rating.setTaskId(req.getParameter("taskId"));
+		rating.setEmpId(Integer.parseInt(req.getParameter("empId")));
 		rating.setJobKnowledge(req.getParameter("jobKnowledge"));
 		rating.setJobKnowledgeCmnt(req.getParameter("jobKnowledgeCmnt"));
 		rating.setWorkquality(req.getParameter("workquality"));
@@ -53,11 +52,16 @@ public class EmpPerformenceController {
 		rating.setDependabilityCmnt(req.getParameter("dependabilityCmnt"));
 		rating.setOverallRating(req.getParameter("overallRating"));
 		rating.setAdditionalCmnt(req.getParameter("additionalCmnt"));
-		
+		rating.setRatingDate(req.getParameter("ratingDate"));		
 		taskIssueInterFService.storePerformanceRating(rating);
-		
-		System.out.println("storeRating accept");
 		return new ModelAndView("redirect:/performance/ratingRecord");
+	}
+	
+	
+	@GetMapping(value = "/reportpage")
+	public ModelAndView getReportPage() {
+		
+		return new ModelAndView("empReport");
 	}
 	
 	

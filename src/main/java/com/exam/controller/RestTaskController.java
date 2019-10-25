@@ -1,5 +1,6 @@
 package com.exam.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import org.hibernate.mapping.Value;
@@ -9,9 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.exam.model.EmpRating;
 import com.exam.model.Employee;
 import com.exam.model.TaskIssue;
 import com.exam.service.EmployeeServiceInterF;
+import com.exam.service.PerformanceRatingServiceInterF;
 import com.exam.service.TaskIssueInterFService;
 
 
@@ -22,9 +25,10 @@ public class RestTaskController {
 	TaskIssueInterFService taskIssueInterFService;
 	@Autowired
 	EmployeeServiceInterF employeeServiceInterF;
+	@Autowired
+	PerformanceRatingServiceInterF performanceRatingServiceInterF;
 	@RequestMapping(value = "showtaskById/{id}")
-	public TaskIssue getTest(@PathVariable String id) {
-		
+	public TaskIssue getTest(@PathVariable String id) {	
 		System.out.println(id);
 		return taskIssueInterFService.getIssueByTaskId(id);
 	}
@@ -33,4 +37,14 @@ public class RestTaskController {
 	public Employee getEmpById(@PathVariable int id) {
 		return  employeeServiceInterF.getById(id);
 	}
+	
+	
+	@RequestMapping(value = "/performance/report")
+	public List<EmpRating> getPerformanceReport() {
+		performanceRatingServiceInterF.getAllRating();
+		System.out.println("performance Accept");
+		return null;
+	}
+	
+	
 }

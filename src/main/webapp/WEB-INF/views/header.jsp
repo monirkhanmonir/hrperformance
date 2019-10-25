@@ -73,7 +73,7 @@
 							aria-expanded="false"> Report </a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown1">
 								<a class="nav-link " href="/employee/showAllTask">Issue Task</a>
-								 <a href="/employee/report" class="nav-link">Performance Report</a>
+								 <a href="/performance/reportpage" class="nav-link">Performance Report</a>
 								  <a href="" class="nav-link">Retirement</a>
 								<a href="" class="nav-link">Appraisal</a>
 							</div></li>

@@ -39,14 +39,14 @@
 									<tr>
 
 										<th><b>Employee Name:</b></th>
-										<td><select class="form-control" name="id" ng-model="id"
+										<td><select class="form-control" name="empId" ng-model="id"
 											ng-change="showEmployee()">
 												<c:forEach var="employee" items="${employeeList}">
 													<option value="${employee.id}">${employee.empName}</option>
 												</c:forEach>
 										</select></td>
-										<th><b>Employee Id: </b></th>
-										<td>{{employee.id}}</td>
+										<th>Rating Date</th>
+										<td><input type="date" name="ratingDate" class="form-control"/></td>
 									</tr>
 									<tr>
 										<th><b>Job Title: </b></th>
@@ -55,8 +55,8 @@
 										<td>{{employee.joinDate}}</td>
 									</tr>
 									<tr>
-										<th><b>Department: </b></th>
-										<td></td>
+										<th><b>Employee Id: </b></th>
+										<td>{{employee.id}}</td>
 										<th><b>Manager:</b></th>
 										<td></td>
 									</tr>

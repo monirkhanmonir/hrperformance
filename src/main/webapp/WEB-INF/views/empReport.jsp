@@ -12,7 +12,14 @@
 	</div>
 </div>
 <!-- //short-->
-<h2>Employee Report</h2>
+
+<div class="container" ng-app="myApp" ng-controller	="myCtrl">
+	<div class="row">
+	<h2> Employee Report </h2>
+		<button class="btn btn-success" ng-click="showPerformanceReport()">Click me</button>
+	</div>
+</div>
+
 
 
 
