@@ -67,8 +67,8 @@ public class EmpPerformenceController {
 	
 	
 	@GetMapping(value = "/empRating/{id}")
-	public ModelAndView getRatingById(@PathVariable ("id") int id) {
-		System.out.println(id);
+	public ModelAndView getRatingById(@PathVariable ("id") int id, Map<String, Object> map) {
+
 		return new ModelAndView("EmpShowRating");
 	}
 	

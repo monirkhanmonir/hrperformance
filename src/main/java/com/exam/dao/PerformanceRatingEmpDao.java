@@ -21,5 +21,12 @@ public class PerformanceRatingEmpDao implements PerformanceRatingDaoInterF{
 			System.out.println("fail");
 		}
 		return ratingLest;
+	}
+	@Override
+	public List<EmpRating> grtRatingById(int id) {
+
+		return null;
+		
+		//return sessionFactory.getCurrentSession().createQuery("From EmpRating rating where rating.empId=:id")
 	}	
 }

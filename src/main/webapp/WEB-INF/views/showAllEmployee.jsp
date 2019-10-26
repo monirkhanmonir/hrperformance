@@ -119,8 +119,8 @@
 								<div class="col-md-6 col-sm-6 ">
 									<span>Role:</span> <input type="radio" value="Admin"
 										name="role">Admin <input type="radio" value="HR"
-										name="role">HR <input type="radio" value="Employee"
-										name="role">Employee
+										name="role">HR <input type="radio" value="Manager"
+										name="role">Manager
 								</div>
 
 							</div>

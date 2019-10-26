@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="managerHeader.jsp"></jsp:include>
 <div class="inner_page-banner one-img"></div>
 <!-- short -->
 <div class="using-border py-3">

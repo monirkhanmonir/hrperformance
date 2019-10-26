@@ -7,6 +7,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,7 +28,9 @@ public class employeeController {
 	EmployeeServiceInterF employeeServiceInterF;
 	@Autowired
 	UserInfoService userInfoService;
-//
+	@Autowired
+	PasswordEncoder passwordEncoder;
+
 //	@GetMapping("/showAllEmployee")
 //	public ModelAndView showAllEmployee() {
 //		return new ModelAndView("showAllEmployee");
@@ -51,7 +54,7 @@ public class employeeController {
 		
 		user.setEmail(req.getParameter("empEmail"));
 		user.setFirstName(req.getParameter("empName"));
-		user.setPassword(req.getParameter("password"));
+		user.setPassword(passwordEncoder.encode(req.getParameter("password")));
 		user.setRole(req.getParameter("role"));
 		user.setUsername(req.getParameter("username"));
 		employeeServiceInterF.storeEmployee(emp);
