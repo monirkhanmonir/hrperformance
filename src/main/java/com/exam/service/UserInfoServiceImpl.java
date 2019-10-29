@@ -31,7 +31,7 @@ public class UserInfoServiceImpl implements UserDetailsService,UserInfoService {
 	
 	private Collection<GrantedAuthority> getAuthorities(UserInfo entity){
 		List<GrantedAuthority> authorities = new ArrayList<>();
-		authorities = AuthorityUtils.createAuthorityList(entity.getRole());
+		authorities = AuthorityUtils.createAuthorityList(entity.getRole().toUpperCase());
 		return authorities;
 		
 	}
