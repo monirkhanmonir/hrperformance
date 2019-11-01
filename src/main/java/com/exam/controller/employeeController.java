@@ -51,6 +51,7 @@ public class employeeController {
 		emp.setPassword(req.getParameter("password"));
 		emp.setRepassword(req.getParameter("repassword"));
 		emp.setAddress(req.getParameter("address"));
+		emp.setUser(req.getParameter("username"));
 		
 		user.setEmail(req.getParameter("empEmail"));
 		user.setFirstName(req.getParameter("empName"));

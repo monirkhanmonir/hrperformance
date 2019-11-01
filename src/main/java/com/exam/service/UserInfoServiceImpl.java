@@ -15,6 +15,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.exam.dao.UserInfoDao;
+import com.exam.dao.UserInfoDaoImpl;
 import com.exam.model.UserInfo;
 
 @Service
@@ -61,4 +62,5 @@ public class UserInfoServiceImpl implements UserDetailsService,UserInfoService {
 		return userInfoDao.getAll();
 	}
 
+	
 }

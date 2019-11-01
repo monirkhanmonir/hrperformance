@@ -81,7 +81,7 @@ public class TransferController {
 		System.err.println(req.getParameter("taskId"));
 		task = taskIssueInterFService.taskEmpUpdate(task);
 		if(task!=null) {
-			System.out.println("operation Success");
+			
 			return new ModelAndView("redirect:/employee/taskissue/21");
 		}else {
 			return null;

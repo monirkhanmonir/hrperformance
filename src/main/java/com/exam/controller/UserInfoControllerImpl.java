@@ -1,6 +1,7 @@
 package com.exam.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.exam.model.UserInfo;
 import com.exam.service.UserInfoService;
@@ -52,5 +54,17 @@ public class UserInfoControllerImpl implements UserInfoController{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	@GetMapping(value = "/profile")
+	public ModelAndView profilePage() {
+	//	System.out.println(${pageContext.request.remoteUser});
+		return new ModelAndView("profile");
+	};
+	
+
+	
+	
+	
+
 
 }

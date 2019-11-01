@@ -55,6 +55,8 @@ public class LoginController {
 			return new ModelAndView("home");
 		}else if(roles.get(0).getAuthority().equalsIgnoreCase("manager")){
 			return new ModelAndView("managerHome");
+		}else if(roles.get(0).getAuthority().equalsIgnoreCase("Employee")){
+			return new ModelAndView("employeeHome");
 		}else {
 			return new ModelAndView("login");
 		}

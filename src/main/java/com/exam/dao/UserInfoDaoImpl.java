@@ -74,4 +74,13 @@ public class UserInfoDaoImpl implements UserInfoDao {
 		return userInfoEntity;
 	}
 
+
+	public int userId(String user) {
+		
+		
+		System.out.println(sessionFactory.getCurrentSession().createQuery("Select E.id FROM Employee E where E.user =:user").setParameter("user",user));
+
+		return 0;
+	}
+
 }

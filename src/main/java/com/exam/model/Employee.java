@@ -12,6 +12,7 @@ public class Employee {
 	int id;
 	public String empName;
 	public String empEmail;
+	public String user;
 	public String gender;
 	public String jobTitle;
 	public String birthDate;
@@ -22,6 +23,27 @@ public class Employee {
 	public String getEmpName() {
 		return empName;
 	}
+	
+	
+
+
+
+	public String getUser() {
+		return user;
+	}
+
+
+
+
+
+	public void setUser(String user) {
+		this.user = user;
+	}
+
+
+
+
+
 	public void setEmpName(String empName) {
 		this.empName = empName;
 	}
@@ -82,12 +104,20 @@ public class Employee {
 	public void setId(int id) {
 		this.id = id;
 	}
+
+
+
+
+
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", empName=" + empName + ", empEmail=" + empEmail + ", gender=" + gender
-				+ ", jobTitle=" + jobTitle + ", birthDate=" + birthDate + ", joinDate=" + joinDate + ", password="
-				+ password + ", repassword=" + repassword + ", address=" + address + "]";
+		return "Employee [id=" + id + ", empName=" + empName + ", empEmail=" + empEmail + ", user=" + user + ", gender="
+				+ gender + ", jobTitle=" + jobTitle + ", birthDate=" + birthDate + ", joinDate=" + joinDate
+				+ ", password=" + password + ", repassword=" + repassword + ", address=" + address + "]";
 	}
+
+
+
 	
 	
 	

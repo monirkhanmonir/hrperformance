@@ -33,6 +33,14 @@ public class EmployeeDaoImp implements EmployeeInterF{
 		System.out.println("ok");
 		return  sessionFactory.getCurrentSession().get(Employee.class, id);
 	}
+	@Override
+	public List<Employee> getByUser(String user) {
+		List emp = sessionFactory.getCurrentSession().createQuery("From Employee emp where emp.user=:user").setParameter("user",user).list();
+		
+//		.createQuery("From TaskIssue task where task.empId=:empId and task.issueStatus='Begin'")
+//		.setParameter("empId", empId).list();
+		return emp;
+	}
 	
 	
 	

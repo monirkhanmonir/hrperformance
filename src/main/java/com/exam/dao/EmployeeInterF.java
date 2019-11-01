@@ -8,5 +8,6 @@ public interface EmployeeInterF {
 	public void storeEmployee(Employee emp);
 	public List<Employee> getAll();
 	public Employee getById(int id);
+	public List<Employee> getByUser(String user);
 	
 }

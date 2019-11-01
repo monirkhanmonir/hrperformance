@@ -33,6 +33,12 @@ public class EmployeeSerImp implements EmployeeServiceInterF{
 		
 		return employeeInterF.getById(id);
 	}
+
+	@Override
+	public List<Employee> getByUser(String user) {
+		
+		return employeeInterF.getByUser(user);
+	}
 	
 	
 }
