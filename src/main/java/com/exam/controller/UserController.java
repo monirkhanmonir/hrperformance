@@ -40,5 +40,14 @@ public class UserController {
 		return new ModelAndView("adminProfile",map);
 	}
 	
+	
+	
+	@GetMapping(value = "/employeeProfile/{user}")
+	public ModelAndView getEmployeeProfile(@PathVariable("user") String user, Map<String, Object > map) {
+		map.put("users", employeeServiceInterF.getByUser(user));
+	System.out.println(employeeServiceInterF.getByUser(user).get(0));	
+		return new ModelAndView("employeeProfile",map);
+	}
+	
 
 }

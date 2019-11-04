@@ -30,8 +30,50 @@
 <link href="/../assets/css/font-awesome.css" rel="stylesheet">
 <!-- //font-awesome icons -->
 <!--stylesheets-->
-<link href="/../assets/css/style.css" rel='stylesheet' type='text/css'
+<link href="/../assets/css/style.css" rel='stylesheet' type='text/css'>
+
+
+
+
+
+
+<!-- 	<link href="/../assets/css/prettify.css" rel='stylesheet' type='text/css'
 	media="all">
+	<link href="/../assets/css/bootstrap-wysihtml5.css" rel='stylesheet' type='text/css'
+	media="all">
+	<style type="text/css" media="screen">
+	.btn.jumbo {
+		font-size: 20px;
+		font-weight: normal;
+		padding: 14px 24px;
+		margin-right: 10px;
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+	}
+</style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30181385-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	 -->
+	
+	
+	
+	
+	
+	
+	
+	
 <!--//stylesheets-->
 <link
 	href="//fonts.googleapis.com/css?family=Mukta+Malar:400,500,600,700"
@@ -79,27 +121,17 @@
 				<div class="collapse navbar-collapse justify-content-end"
 					id="navbarSupportedContent">
 					<ul class="navbar-nav ">
-						<li class="nav-item active"><a class="nav-link" href="/">Employee Home
+						<li class="nav-item active"><a class="nav-link" href="/employee/employeeHome">Employee Home
 								<span class="sr-only">(current)</span>
 						</a></li>
-						 <li class="nav-item"><a href="/user/profile/${pageContext.request.remoteUser}" class="nav-link ">Profile</a>
+						 <li class="nav-item"><a href="/user/employeeProfile/${pageContext.request.remoteUser}" class="nav-link ">Profile</a>
 						</li>
 						<c:forEach var="user" items="${users}">
 						 <li class="nav-item"><a href="/employee/taskissue/${user.id}" class="nav-link ">Task</a>
 						 </c:forEach>
 						</li>
-						<li class="nav-item dropdown"><a
-							class="nav-link dropdown-toggle" href="#" id="navbarDropdown1"
-							role="button" data-toggle="dropdown" aria-haspopup="true"
-							aria-expanded="false"> Report </a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-								<a class="nav-link " href="/employee/showAllTask">Issue Task</a>
-								<!-- <a href="/performance/reportpage" class="nav-link">Performance
-									Report</a> -->
-									 <a href="" class="nav-link">Retirement</a> 
-									 <a href=""
-									class="nav-link">Appraisal</a>
-							</div></li>
+						 <li class="nav-item"><a href="/employee/empreportEditor" class="nav-link ">Report</a>
+						</li>
 
 
 						<li class="nav-item dropdown"><a

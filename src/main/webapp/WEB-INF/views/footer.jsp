@@ -213,6 +213,36 @@
 
 	});
 </script>
+
+
+
+
+
+
+<!-- 
+<script src="/../assets/js/wysihtml5-0.3.0.js"></script>
+<script src="/../assets/js/jquery-1.7.2.min.js"></script>
+<script src="/../assets/js/prettify.js"></script>
+<script src="/../assets/js/bootstrap-wysihtml5.js"></script>
+
+<script>
+	$('.textarea').wysihtml5();
+</script>
+
+<script type="text/javascript" charset="utf-8">
+	$(prettyPrint);
+</script>
+ -->
+
+
+
+
+
+
+
+
+
+
 <!-- //here ends scrolling icon -->
 <!--bootstrap working-->
 <script src="/../assets/js/bootstrap.min.js"></script>

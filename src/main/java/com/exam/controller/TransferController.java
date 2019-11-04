@@ -64,8 +64,15 @@ public class TransferController {
 	
 	@GetMapping(value = "/taskissue/{id}")
 	public ModelAndView getIssueById(@PathVariable("id") int id, Map<String, Object > map) {
-		map.put("emptask",taskIssueInterFService.getIssueById(id) );
-		System.out.println("con Ok"+""+ taskIssueInterFService.getIssueById(id) .get(0));
+	List<TaskIssue> empTask =	taskIssueInterFService.getIssueById(id);
+	if(!empTask.isEmpty()) {
+		map.put("emptask", empTask);
+	}else {
+		
+		map.put("error", "Employee hase no task");
+	}
+		
+		
 		return new ModelAndView("emptaskshow",map);
 	}
 	
@@ -78,11 +85,11 @@ public class TransferController {
 		}
 		task.setFinishDate(req.getParameter("finishDate"));
 		task.setIssueStatus("Done");
-		System.err.println(req.getParameter("taskId"));
+		
 		task = taskIssueInterFService.taskEmpUpdate(task);
 		if(task!=null) {
 			
-			return new ModelAndView("redirect:/employee/taskissue/21");
+			return new ModelAndView("redirect:/employee/employeeHome");
 		}else {
 			return null;
 		}

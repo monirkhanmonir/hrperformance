@@ -83,5 +83,15 @@ public class employeeController {
 		return new ModelAndView("/editemployee");
 	}
 	
+	@RequestMapping(value = "/employeeHome")
+	public ModelAndView getEmployeeHome() {
+		return new ModelAndView("employeeHome");
+	}
+	
+	
+	@RequestMapping(value = "/empreportEditor")
+	public ModelAndView getEmpReprtEditor() {
+		return new ModelAndView("reportEditor");
+	}
 	
 }

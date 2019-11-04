@@ -31,6 +31,27 @@
 <!--stylesheets-->
 <link href="/../assets/css/style.css" rel='stylesheet' type='text/css'
 	media="all">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
 <!--//stylesheets-->
 <link
 	href="//fonts.googleapis.com/css?family=Mukta+Malar:400,500,600,700"
