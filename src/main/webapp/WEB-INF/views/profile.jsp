@@ -17,6 +17,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
+		<p:autoComplete id="acSimple" />
 			<div class="card">
 				<div class="card-header">Users Profile</div>
 				<div class="card-body">

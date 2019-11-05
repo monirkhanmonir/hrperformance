@@ -31,6 +31,19 @@
 							<div class="card-body">
 								<div class="row">
 									<div class="col-lg-4 col-md-4">
+									
+									<form action="/performance/byId" method="post">									
+									<div class="form-group row">
+											<label  class="col-sm-5 col-form-label">Print By Id: </label>
+											<div class="col-sm-7">
+												<input type="number" min="0" max="10"
+											step="1"  class="form-control" name="id">
+											<input type="submit" value="Show PDF" class="btn btn-info"/> 
+											</div>
+										</div>
+									</form>
+									
+									
 										<div class="form-group row">
 											<label for="staticEmail" class="col-sm-5 col-form-label">Roles to display: </label>
 											<div class="col-sm-7">

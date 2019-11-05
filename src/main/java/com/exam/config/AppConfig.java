@@ -18,6 +18,9 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+import com.exam.jasperreports.SimpleReportExporter;
+import com.exam.jasperreports.SimpleReportFiller;
+
 @Configuration
 @EnableTransactionManagement
 @EnableAutoConfiguration(exclude = HibernateJpaAutoConfiguration.class)
@@ -88,5 +91,14 @@ public class AppConfig {
        bean.setSuffix(".jsp");
        return bean;
     }
+    @Bean
+	public SimpleReportFiller reportFiller() {
+		return new SimpleReportFiller();
+	}
+
+	@Bean
+	public SimpleReportExporter reportExporter() {
+		return new SimpleReportExporter();
+	}
     
 }

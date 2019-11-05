@@ -13,7 +13,5 @@
 </div>
 <!-- //short-->
 <h2>About Us</h2>
-<div ng-app="myApp" ng-controller="myCtrl">
-	<button class="btn btn-success" ng-click="getTask()">Check</button>
-</div>
+
 <jsp:include page="footer.jsp"></jsp:include>

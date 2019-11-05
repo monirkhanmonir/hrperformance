@@ -1,8 +1,15 @@
 package com.exam.controller;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,6 +18,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.exam.jasperreports.SimpleReportExporter;
+import com.exam.jasperreports.SimpleReportFiller;
 import com.exam.model.EmpRating;
 import com.exam.service.EmployeeServiceInterF;
 import com.exam.service.PerformanceRatingServiceInterF;
@@ -25,6 +35,8 @@ public class EmpPerformenceController {
 	EmployeeServiceInterF employeeServiceInterF;
 	@Autowired
 	PerformanceRatingServiceInterF performanceRatingServiceInterF;
+	@Autowired
+	SimpleReportFiller simpleReportFiller;
 
 	@GetMapping(value = "/ratingRecord")
 	public ModelAndView getRetirementPage(Map<String, Object> map) {
@@ -74,6 +86,82 @@ public class EmpPerformenceController {
 	
 	
 	
+	
+	
+	@Autowired
+	private ServletContext servletContext;
+
+	@GetMapping("/pdf")
+	public String pdf(HttpServletResponse response) {
+		response.setContentType("application/pdf");
+		try {
+			SimpleReportExporter simpleExporter = new SimpleReportExporter();
+
+			simpleReportFiller.setReportFileName("Performance.jrxml");
+			simpleReportFiller.compileReport();
+
+			Map<String, Object> parameters = new HashMap<>();
+
+			simpleReportFiller.setParameters(parameters);
+			simpleReportFiller.fillReport();
+			simpleExporter.setJasperPrint(simpleReportFiller.getJasperPrint());
+
+			simpleExporter.exportToPdf("Performance.pdf", "olonsoft");
+
+			File file = new File("src/main/resources/reports/Performance.pdf");
+			response.setHeader("Content-Type", servletContext.getMimeType(file.getName()));
+			response.setHeader("Content-Length", String.valueOf(file.length()));
+			response.setHeader("Content-Disposition", "inline; filename=\"Performance.pdf\"");
+			Files.copy(file.toPath(), response.getOutputStream());
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	
+
+
+	@PostMapping("byId")
+	public String getByIdpdf(HttpServletResponse response, HttpServletRequest req) {
+	int id= 	Integer.parseInt(req.getParameter("id"));
+		
+		response.setContentType("application/pdf");
+		try {
+			SimpleReportExporter simpleExporter = new SimpleReportExporter();
+
+			simpleReportFiller.setReportFileName("employeePerformance.jrxml");
+			simpleReportFiller.compileReport();
+
+			Map<String, Object> parameters = new HashMap<>();
+			parameters.put("id", id);
+
+			simpleReportFiller.setParameters(parameters);
+			simpleReportFiller.fillReport();
+			simpleExporter.setJasperPrint(simpleReportFiller.getJasperPrint());
+
+			simpleExporter.exportToPdf("employeePerformance.pdf", "olonsoft");
+
+			File file = new File("src/main/resources/reports/employeePerformance.pdf");
+			response.setHeader("Content-Type", servletContext.getMimeType(file.getName()));
+			response.setHeader("Content-Length", String.valueOf(file.length()));
+			response.setHeader("Content-Disposition", "inline; filename=\"employeePerformance.pdf\"");
+			Files.copy(file.toPath(), response.getOutputStream());
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
 	
 
 }
