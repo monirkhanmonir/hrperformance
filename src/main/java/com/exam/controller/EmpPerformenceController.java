@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletContext;
@@ -22,9 +23,12 @@ import org.springframework.web.servlet.ModelAndView;
 import com.exam.jasperreports.SimpleReportExporter;
 import com.exam.jasperreports.SimpleReportFiller;
 import com.exam.model.EmpRating;
+import com.exam.model.Employee;
+import com.exam.model.WorkReport;
 import com.exam.service.EmployeeServiceInterF;
 import com.exam.service.PerformanceRatingServiceInterF;
 import com.exam.service.TaskIssueInterFService;
+import com.exam.service.WorkRepoServiceInterF;
 
 @Controller
 @RequestMapping(value = "/performance")
@@ -37,11 +41,18 @@ public class EmpPerformenceController {
 	PerformanceRatingServiceInterF performanceRatingServiceInterF;
 	@Autowired
 	SimpleReportFiller simpleReportFiller;
+	@Autowired
+	WorkRepoServiceInterF workRepoServiceInterF;
+	
+	
 
 	@GetMapping(value = "/ratingRecord")
 	public ModelAndView getRetirementPage(Map<String, Object> map) {
 				
-		map.put("employeeList", employeeServiceInterF.getAll());
+		//map.put("employeeList", employeeServiceInterF.getAll());
+		
+		
+		map.put("workRepo", workRepoServiceInterF.getAllApplyRepo());
 		
 		return new ModelAndView("empPerformanceReport",map);
 	
@@ -161,6 +172,33 @@ public class EmpPerformenceController {
 		}
 		return null;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	@PostMapping(value = "/workReport/{user}")
+	public ModelAndView getEmpReport(@PathVariable("user") String user,HttpServletRequest req) {
+		List<Employee> empList = employeeServiceInterF.getByUser(user);
+		WorkReport wr = new WorkReport();
+		wr.setEmpId(empList.get(0).getId());
+		wr.setEmpName(empList.get(0).getEmpName());
+		wr.setJobTitle(empList.get(0).getJobTitle());
+		wr.setReopDate(req.getParameter("reopDate"));
+		wr.setRepoDuration(req.getParameter("repoDuration"));
+		wr.setWorkReport(req.getParameter("workReport"));
+		wr.setRepoStatus("applay");
+		workRepoServiceInterF.storeWorkReport(wr);
+		
+		
+		
+		
+		return new ModelAndView("redirect:/employee/empreportEditor");
+	}
+	
 
 	
 

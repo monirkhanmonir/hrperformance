@@ -24,8 +24,6 @@
 					<div class="info-para">
 						<!--contact-map -->
 						<!-- Default form register -->
-
-
 						<div class="card">
 							<div class="card-header">Employee Report</div>
 							<div class="card-body">
@@ -41,9 +39,7 @@
 											<input type="submit" value="Show PDF" class="btn btn-info"/> 
 											</div>
 										</div>
-									</form>
-									
-									
+									</form>								
 										<div class="form-group row">
 											<label for="staticEmail" class="col-sm-5 col-form-label">Roles to display: </label>
 											<div class="col-sm-7">

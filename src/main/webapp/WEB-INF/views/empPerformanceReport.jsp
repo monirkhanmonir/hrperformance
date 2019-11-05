@@ -41,8 +41,8 @@
 										<th><b>Employee Name:</b></th>
 										<td><select class="form-control" name="empId" ng-model="id"
 											ng-change="showEmployee()">
-												<c:forEach var="employee" items="${employeeList}">
-													<option value="${employee.id}">${employee.empName}</option>
+												<c:forEach var="repo" items="${workRepo}">
+													<option value="${repo.empId}">${repo.empName}</option>
 												</c:forEach>
 										</select></td>
 										<th>Rating Date</th>
