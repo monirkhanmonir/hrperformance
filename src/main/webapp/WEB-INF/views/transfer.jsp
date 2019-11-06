@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <jsp:include page="managerHeader.jsp"></jsp:include>
 <div class="inner_page-banner one-img"></div>
 <!-- short -->
@@ -22,7 +23,7 @@
 				<div class="info-para">
 					<!--contact-map -->
 					<!-- Default form register -->
-					<form action="/employee/taskissue" method="post">
+					<form action="<c:url value="/employee/taskissue"/>" method="post">
 						<div class="form-row">
 							<div class="form-group col-md-6">
 								<label for="inputEmail4">Task Id:</label> <input type="text"

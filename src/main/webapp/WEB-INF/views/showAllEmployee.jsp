@@ -15,7 +15,7 @@
 <!-- //short-->
 
 <div ng-app="myApp" ng-controller="myCtrl">
-	<h2>{{msg}}</h2>
+	
 	<div class="flote-right">
 		<!-- Button trigger modal -->
 		<button type="button" class="btn btn-success" data-toggle="modal"
@@ -53,11 +53,9 @@
 
 
 				<td>
-					<!-- <button class="btn btn-success" data-toggle="modal"
-						data-target="#exampleModal" >
-						<i class="fa fa-edit"></i>
-					</button> --> <a href="/employee/editemp/${employee.id}"
-					class="btn btn-primary"><i class="fa fa-edit"></i></a>
+					 <a href="<c:url value="/employee/editemp/${employee.id}"/>"
+					class="btn btn-primary"><i class="fa fa-edit"></i>Edit</a>
+					
 					<button class="btn btn-danger">Delete</button>
 				</td>
 			</tr>
@@ -85,7 +83,7 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						<form action="/employee/employeeRegister" method="post">
+						<form action="<c:url value='/employee/employeeRegister'/>" method="post">
 							<div class="row wls-contact-mid">
 								<div class="col-md-6 col-sm-6 form-group contact-forms">
 									<input type="text" class="form-control"

@@ -45,8 +45,8 @@
 			<td>${task.ramark}</td>
 			<td>${task.finishDate}</td>
 			<td>
-			<a href="/employee/editTask/${task.taskId}" class="btn btn-success"><i class="fa fa-edit"></i></a>
-			<a href="/employee/deleteTask/${task.taskId}" class="btn btn-danger">Delete</a>
+			<a href="<c:url value='/employee/editTask/${task.taskId}'/>" class="btn btn-success"><i class="fa fa-edit"></i></a>
+			<a href="<c:url value="/employee/deleteTask/${task.taskId}"/>" class="btn btn-danger">Delete</a>
 				
 			</td>
 		</tr>

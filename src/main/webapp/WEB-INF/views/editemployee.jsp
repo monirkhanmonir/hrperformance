@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <jsp:include page="header.jsp"></jsp:include>
 <div class="inner_page-banner one-img"></div>
 <!-- short -->
@@ -12,7 +13,7 @@
 	</div>
 </div>
 <!-- //short-->
-<form action="/employee/employeeRegister" method="post">
+<form action="<c:url value='/employee/employeeRegister'/>" method="post">
 	<div class="row wls-contact-mid">
 		<div class="col-md-6 col-sm-6 form-group contact-forms">
 			<input type="text" class="form-control" placeholder="Employee Name"

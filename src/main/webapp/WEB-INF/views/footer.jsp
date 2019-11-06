@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!--footer-->
 <footer class="buttom-footer py-lg-5 py-md-4 py-sm-3 py-3">
 	<div class="container-fluid py-3">
@@ -142,14 +143,14 @@
 <!--//Register-->
 
 
-<script src="/../assets/js/app.js"></script>
-<script src="/../assets/js/controller.js"></script>
+<script src="<c:url value='/assets/js/app.js'/>"></script>
+<script src="<c:url value='/assets/js/controller.js'/>"></script>
 
 <!--js working-->
-<script src='/../assets/js/jquery-2.2.3.min.js'></script>
+<script src="<c:url value='/assets/js/jquery-2.2.3.min.js'/>"></script>
 <!--//js working-->
 <!--responsiveslides banner-->
-<script src="/../assets/js/responsiveslides.min.js"></script>
+<script src="<c:url value='/assets/js/responsiveslides.min.js'/>"></script>
 <script>
 	// You can also use "$(window).load(function() {"
 	$(function() {
@@ -172,15 +173,15 @@
 </script>
 <!--// responsiveslides banner-->
 <!--About OnScroll-Number-Increase-JavaScript -->
-<script src="/../assets/js/jquery.waypoints.min.js"></script>
-<script src="/../assets/js/jquery.countup.js"></script>
+<script src="<c:url value='/assets/js/jquery.waypoints.min.js'/>"></script>
+<script src="<c:url value='/assets/js/jquery.countup.js'/>"></script>
 <script>
 	$('.counter').countUp();
 </script>
 <!-- //OnScroll-Number-Increase-JavaScript -->
 <!-- start-smoth-scrolling -->
-<script src="/../assets/js/move-top.js"></script>
-<script src="/../assets/js/easing.js"></script>
+<script src="<c:url value='assets/js/move-top.js'/>"></script>
+<script src="<c:url value='/assets/js/easing.js'/>"></script>
 <script>
 	$(window).load(function() {
 		$('#myModal').modal('show');
@@ -213,39 +214,9 @@
 
 	});
 </script>
-
-
-
-
-
-
-<!-- 
-<script src="/../assets/js/wysihtml5-0.3.0.js"></script>
-<script src="/../assets/js/jquery-1.7.2.min.js"></script>
-<script src="/../assets/js/prettify.js"></script>
-<script src="/../assets/js/bootstrap-wysihtml5.js"></script>
-
-<script>
-	$('.textarea').wysihtml5();
-</script>
-
-<script type="text/javascript" charset="utf-8">
-	$(prettyPrint);
-</script>
- -->
-
-
-
-
-
-
-
-
-
-
 <!-- //here ends scrolling icon -->
 <!--bootstrap working-->
-<script src="/../assets/js/bootstrap.min.js"></script>
+<script src="<c:url value='/assets/js/bootstrap.min.js'/>"></script>
 <!-- //bootstrap working-->
 </body>
 </html>
