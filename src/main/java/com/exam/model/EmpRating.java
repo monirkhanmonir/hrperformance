@@ -12,12 +12,9 @@ public class EmpRating {
 	int ratingId;
 	public int empId;
 	public String ratingDate;
-	public String getRatingDate() {
-		return ratingDate;
-	}
-	public void setRatingDate(String ratingDate) {
-		this.ratingDate = ratingDate;
-	}
+	public String empName;
+	public String jobTitle;
+	
 	public String jobKnowledge;
 	public String jobKnowledgeCmnt;
 	public String workquality;
@@ -32,6 +29,30 @@ public class EmpRating {
 	public String dependabilityCmnt;
 	public String overallRating;
 	public String additionalCmnt;
+	
+	
+	
+	
+	
+	
+	public String getEmpName() {
+		return empName;
+	}
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+	public String getJobTitle() {
+		return jobTitle;
+	}
+	public void setJobTitle(String jobTitle) {
+		this.jobTitle = jobTitle;
+	}
+	public String getRatingDate() {
+		return ratingDate;
+	}
+	public void setRatingDate(String ratingDate) {
+		this.ratingDate = ratingDate;
+	}
 
 	public int getRatingId() {
 		return ratingId;
@@ -132,13 +153,14 @@ public class EmpRating {
 	}
 	@Override
 	public String toString() {
-		return "EmpRating [ratingId=" + ratingId + ", empId=" + empId + ", jobKnowledge=" + jobKnowledge
-				+ ", jobKnowledgeCmnt=" + jobKnowledgeCmnt + ", workquality=" + workquality + ", workqualityCmnt="
-				+ workqualityCmnt + ", attendance=" + attendance + ", attendanceCmnt=" + attendanceCmnt
-				+ ", productivity=" + productivity + ", productivityCmnt=" + productivityCmnt + ", communicationSkills="
-				+ communicationSkills + ", communicationSkillsCmnt=" + communicationSkillsCmnt + ", dependability="
-				+ dependability + ", dependabilityCmnt=" + dependabilityCmnt + ", overallRating=" + overallRating
-				+ ", additionalCmnt=" + additionalCmnt + "]";
+		return "EmpRating [ratingId=" + ratingId + ", empId=" + empId + ", ratingDate=" + ratingDate + ", empName="
+				+ empName + ", jobTitle=" + jobTitle + ", jobKnowledge=" + jobKnowledge + ", jobKnowledgeCmnt="
+				+ jobKnowledgeCmnt + ", workquality=" + workquality + ", workqualityCmnt=" + workqualityCmnt
+				+ ", attendance=" + attendance + ", attendanceCmnt=" + attendanceCmnt + ", productivity=" + productivity
+				+ ", productivityCmnt=" + productivityCmnt + ", communicationSkills=" + communicationSkills
+				+ ", communicationSkillsCmnt=" + communicationSkillsCmnt + ", dependability=" + dependability
+				+ ", dependabilityCmnt=" + dependabilityCmnt + ", overallRating=" + overallRating + ", additionalCmnt="
+				+ additionalCmnt + "]";
 	}
 
 

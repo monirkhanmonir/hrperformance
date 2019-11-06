@@ -97,8 +97,8 @@
 											ng-repeat="rating in ratingList | orderBy:sortColmn:reverseSort |limitTo:rowLimit|filter:search">
 											<td>{{$index+1}}</td>
 											<td>{{rating.empId}}</td>
-											<td>Employee Name</td>
-											<td>Job Title</td>
+											<td>{{rating.empName}}</td>
+											<td>{{rating.jobTitle}}</td>
 											<td>{{rating.attendance}}</td>
 											<td>{{rating.communicationSkills}}</td>
 											<td>{{rating.dependability}}</td>

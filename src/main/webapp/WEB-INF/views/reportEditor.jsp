@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <jsp:include page="employeeHeader.jsp"></jsp:include>
 <div class="inner_page-banner one-img"></div>
@@ -22,7 +23,7 @@
 			<div class="col-lg-12 col-md-12">
 				<div class="info-para">
 					<!--contact-map -->
-					<form action="/performance/workReport/${pageContext.request.remoteUser}" method="post" >
+					<form action="<c:url value='/performance/workReport/${pageContext.request.remoteUser}'/>" method="post" >
 						<div class="row wls-contact-mid">
 							<div class="col-md-6 col-sm-6 form-group contact-forms">
 								<select class="form-control w3-select w3-border" name="repoDuration">

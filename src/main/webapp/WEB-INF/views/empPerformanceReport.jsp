@@ -32,7 +32,7 @@
 							<div class="alert alert-primary" role="alert">
 								<p>Employee task Feedback Information</p>
 							</div>
-							<form action="/performance/storeRating" method="post"
+							<form action="<c:url value="/performance/storeRating"/>" method="post"
 								ng-app="myApp" ng-controller="myCtrl">
 								<table class="table table-bordered table-sm">
 
@@ -42,7 +42,7 @@
 										<td><select class="form-control" name="empId" ng-model="id"
 											ng-change="showEmployee()">
 												<c:forEach var="repo" items="${workRepo}">
-													<option value="${repo.empId}">${repo.empName}</option>
+													<option value="${repo.id}">${repo.empName}</option>
 												</c:forEach>
 										</select></td>
 										<th>Rating Date</th>
@@ -56,7 +56,9 @@
 									</tr>
 									<tr>
 										<th><b>Employee Id: </b></th>
-										<td>{{employee.id}}</td>
+										<td><input type="hidden" value="{{employee.id}}" name="empId">
+										<input type="hidden" value="{{employee.name}}" name="empName">
+										<input type="hidden" value="{{employee.jobTitle}}" name="empName">{{employee.id}}</td>
 										<th><b>Manager:</b></th>
 										<td></td>
 									</tr>

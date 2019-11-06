@@ -7,6 +7,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.exam.dao.WorkReportDaoEmpl;
 import com.exam.dao.WorkReportDaoInterF;
 import com.exam.model.WorkReport;
 
@@ -15,6 +16,8 @@ import com.exam.model.WorkReport;
 public class WorkRepoServiceImpl implements WorkRepoServiceInterF{
 	@Autowired
 	WorkReportDaoInterF workReportDaoInterF;
+	@Autowired 
+	WorkReportDaoEmpl workreportDaoEmpl;
 
 	@Override
 	public void storeWorkReport(WorkReport report) {
@@ -26,6 +29,12 @@ public class WorkRepoServiceImpl implements WorkRepoServiceInterF{
 	public List<WorkReport> getAllApplyRepo() {
 		
 		return workReportDaoInterF.getAllApplyRepo();
+	}
+
+	@Override
+	public WorkReport getWorkReportByID(int id) {
+		
+		return workreportDaoEmpl.getWorkReportByID(id);
 	}
 
 

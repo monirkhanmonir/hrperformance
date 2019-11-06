@@ -27,6 +27,12 @@ public class WorkReportDaoEmpl implements WorkReportDaoInterF{
 		
 		return sessionFactory.getCurrentSession().createQuery("FROM WorkReport repo where repo.repoStatus='applay'").list();
 	}
+	@Override
+	public WorkReport getWorkReportByID(int id){
+		
+		return sessionFactory.getCurrentSession().get(WorkReport.class, id);
+	}
+	
 
 	
 //	.createQuery("From TaskIssue task where task.empId=:empId and task.issueStatus='Begin'")

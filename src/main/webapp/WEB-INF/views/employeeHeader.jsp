@@ -71,7 +71,7 @@
 				style="background-color: rgba(0, 0, 0, 0.2)">
 				<div class="hedder-up">
 					<h1>
-						<a class="navbar-brand" href="/">HR Performance</a>
+						<a class="navbar-brand" href="<c:url value="/employee/employeeHome"/>">HR Performance</a>
 					</h1>
 				</div>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -83,34 +83,22 @@
 				<div class="collapse navbar-collapse justify-content-end"
 					id="navbarSupportedContent">
 					<ul class="navbar-nav ">
-						<li class="nav-item active"><a class="nav-link" href="/employee/employeeHome">Employee Home
+						<li class="nav-item active"><a class="nav-link" href="<c:url value='/employee/employeeHome'/>">Home
 								<span class="sr-only">(current)</span>
 						</a></li>
-						 <li class="nav-item"><a href="/user/employeeProfile/${pageContext.request.remoteUser}" class="nav-link ">Profile</a>
+						 <li class="nav-item"><a href="<c:url value='/user/employeeProfile/${pageContext.request.remoteUser}'/>" class="nav-link ">Profile</a>
 						</li>
 						<c:forEach var="user" items="${users}">
-						 <li class="nav-item"><a href="/employee/taskissue/${user.id}" class="nav-link ">Task</a>
+						 <li class="nav-item"><a href="<c:url value='/employee/taskissue/${user.id}'/>" class="nav-link ">Task</a>
 						 </c:forEach>
 						</li>
-						 <li class="nav-item"><a href="/employee/empreportEditor" class="nav-link ">Report</a>
+						 <li class="nav-item"><a href="<c:url value="/employee/empreportEditor"/>" class="nav-link ">Report</a>
+						</li>
+						 <li class="nav-item"><a href="<c:url value="/performance/feedback/${pageContext.request.remoteUser}"/>" class="nav-link ">Feedback</a>
 						</li>
 
 
-						<li class="nav-item dropdown"><a
-							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-							role="button" data-toggle="dropdown" aria-haspopup="true"
-							aria-expanded="false"> Record </a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<!-- <a class="nav-link " href="/employee/showAllEmployee">All
-									Employee</a> -->
-									
-									 <a href="/employee/transfer" class="nav-link">Issue
-									Task</a>
-									 <a href="/performance/ratingRecord" class="nav-link">Performance
-									Report</a> 
-									<!-- <a href="/task/status" class="nav-link">Task Status</a> -->
-							</div>
-							</li>
+						
 						<!-- <li class="nav-item"><a href="/contactus" class="nav-link">Contact</a>
 						</li> -->
 						<li class="nav-button">

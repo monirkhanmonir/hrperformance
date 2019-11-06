@@ -27,6 +27,6 @@ public class PerformanceRatingEmpDao implements PerformanceRatingDaoInterF{
 
 		return null;
 		
-		//return sessionFactory.getCurrentSession().createQuery("From EmpRating rating where rating.empId=:id")
+		
 	}	
 }

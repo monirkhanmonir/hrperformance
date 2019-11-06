@@ -76,7 +76,9 @@ public class EmpPerformenceController {
 		rating.setDependabilityCmnt(req.getParameter("dependabilityCmnt"));
 		rating.setOverallRating(req.getParameter("overallRating"));
 		rating.setAdditionalCmnt(req.getParameter("additionalCmnt"));
-		rating.setRatingDate(req.getParameter("ratingDate"));		
+		rating.setRatingDate(req.getParameter("ratingDate"));
+		rating.setEmpName(req.getParameter("empName"));
+		rating.setJobTitle(req.getParameter("jobTitle"));
 		taskIssueInterFService.storePerformanceRating(rating);
 		return new ModelAndView("redirect:/performance/ratingRecord");
 	}
@@ -91,8 +93,12 @@ public class EmpPerformenceController {
 	
 	@GetMapping(value = "/empRating/{id}")
 	public ModelAndView getRatingById(@PathVariable ("id") int id, Map<String, Object> map) {
+		System.out.println(id);
+	WorkReport report = workRepoServiceInterF.getWorkReportByID(id);
+	map.put("workrepo",report);
+		System.out.println(report);
 
-		return new ModelAndView("EmpShowRating");
+		return new ModelAndView("EmpShowRating",map);
 	}
 	
 	
@@ -192,11 +198,23 @@ public class EmpPerformenceController {
 		wr.setWorkReport(req.getParameter("workReport"));
 		wr.setRepoStatus("applay");
 		workRepoServiceInterF.storeWorkReport(wr);
-		
-		
-		
-		
 		return new ModelAndView("redirect:/employee/empreportEditor");
+	}
+	
+	
+	@GetMapping(value = "/feedback/{user}")
+	public ModelAndView getFeedbace(@PathVariable("user") String user,Map<String , Object> map) {
+		
+		System.out.println(user);
+		return new ModelAndView("performFeedback");
+	}
+	
+	
+	@GetMapping(value = "/ratingRecord/{id}")
+	public ModelAndView getReatingById() {
+		
+		
+		return null;
 	}
 	
 

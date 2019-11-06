@@ -50,7 +50,7 @@
 					</tr>
 				</table>
 
-				<form action="/employee/taskDone" method="post">
+				<form action="<c:url value="/employee/taskDone"/>" method="post">
 					<table class="table">
 						<tr>
 						<input type="text" value="${task.taskId}" readonly="readonly" name="taskId" hidden="true"/>
