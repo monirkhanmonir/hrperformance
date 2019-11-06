@@ -48,8 +48,8 @@
 									required="">
 							</div>
 						</div>
-						<div class="form-group contact-forms">
-							<textarea class="form-control" rows="3" placeholder="Message.."
+						<div class="form-group contact-forms">						
+						 <textarea class="form-control"
 								required="" name="workReport"></textarea>
 						</div>
 						<div class="text-left click-subscribe">
