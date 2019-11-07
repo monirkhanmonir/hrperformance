@@ -38,9 +38,9 @@
 	
 <!--//stylesheets-->
 <link
-	href="//fonts.googleapis.com/css?family=Mukta+Malar:400,500,600,700"
+	href="<c:url value='//fonts.googleapis.com/css?family=Mukta+Malar:400,500,600,700'/>"
 	rel="stylesheet">
-<link href="//fonts.googleapis.com/css?family=Roboto:400,500"
+<link href="<c:url value='//fonts.googleapis.com/css?family=Roboto:400,500'/>"
 	rel="stylesheet">
 <script src="<c:url value="/assets/js/angular.min.js"/>"></script>
 

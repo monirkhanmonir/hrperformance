@@ -205,11 +205,14 @@ public class EmpPerformenceController {
 	
 	@GetMapping(value = "/feedback/{user}")
 	public ModelAndView getFeedbace(@PathVariable("user") String user,Map<String , Object> map) {
+		
 		List<Employee> empList = employeeServiceInterF.getByUser(user);
 		int id = empList.get(0).getId();
-		List<EmpRating> test = performanceRatingServiceInterF.getRatingById(id);
-		System.out.println(test);
-		map.put("workReport", test);
+		System.out.println(id);
+		List<EmpRating> ratinglist = performanceRatingServiceInterF.getRatingById(id);
+		System.out.println(ratinglist.get(0));
+		
+		map.put("empWorkReport", ratinglist);
 
 		return new ModelAndView("performFeedback",map);
 	}

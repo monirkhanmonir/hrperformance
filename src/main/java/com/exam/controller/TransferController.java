@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.exam.model.Employee;
 import com.exam.model.TaskIssue;
+import com.exam.service.EmployeeServiceInterF;
 import com.exam.service.TaskIssueInterFService;
 
 @Controller
@@ -22,6 +24,8 @@ import com.exam.service.TaskIssueInterFService;
 public class TransferController {
 	@Autowired
 	TaskIssueInterFService taskIssueInterFService;
+	@Autowired
+	EmployeeServiceInterF employeeServiceInterF;
 
 	@GetMapping("/transfer")
 	public ModelAndView getTransferPage() {
@@ -62,8 +66,10 @@ public class TransferController {
 		
 	}
 	
-	@GetMapping(value = "/taskissue/{id}")
-	public ModelAndView getIssueById(@PathVariable("id") int id, Map<String, Object > map) {
+	@GetMapping(value = "/taskissue/{user}")
+	public ModelAndView getIssueById(@PathVariable("user") String user, Map<String, Object > map) {
+		List<Employee> empList = employeeServiceInterF.getByUser(user);
+		int id = empList.get(0).getId();
 	List<TaskIssue> empTask =	taskIssueInterFService.getIssueById(id);
 	if(!empTask.isEmpty()) {
 		map.put("emptask", empTask);

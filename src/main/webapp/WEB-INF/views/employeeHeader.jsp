@@ -4,8 +4,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-<title>Job-point a Human Resource Category Bootstrap Responsive
-	Web Template | Home :: w3layouts</title>
+<title>Hr Performance Management ${pageContext.request.remoteUser}</title>
 <!--meta tags -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,13 +37,30 @@
 	
 <!--//stylesheets-->
 <link
-	href="//fonts.googleapis.com/css?family=Mukta+Malar:400,500,600,700"
+	href="<c:url value='//fonts.googleapis.com/css?family=Mukta+Malar:400,500,600,700'/>"
 	rel="stylesheet">
-<link href="//fonts.googleapis.com/css?family=Roboto:400,500"
+<link href="<c:url value='//fonts.googleapis.com/css?family=Roboto:400,500'/>"
 	rel="stylesheet">
 <script src="<c:url value="/assets/js/angular.min.js"/>"></script>
-<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-<script>tinymce.init({selector:'textarea'});</script>
+
+
+
+
+
+
+
+
+<%-- <script src="<c:url value="/assets/js/tinymce.min.js"/>"></script>
+
+<script>tinymce.init({selector:'textarea'});</script> --%>
+
+
+
+
+
+
+
+
 
 <style type="text/css">
 .arrow-down {
@@ -90,9 +106,9 @@
 						</a></li>
 						 <li class="nav-item"><a href="<c:url value='/user/employeeProfile/${pageContext.request.remoteUser}'/>" class="nav-link ">Profile</a>
 						</li>
-						<c:forEach var="user" items="${users}">
-						 <li class="nav-item"><a href="<c:url value='/employee/taskissue/${user.id}'/>" class="nav-link ">Task</a>
-						 </c:forEach>
+						
+						 <li class="nav-item"><a href="<c:url value='/employee/taskissue/${pageContext.request.remoteUser}'/>" class="nav-link ">Task</a>
+					
 						</li>
 						 <li class="nav-item"><a href="<c:url value="/employee/empreportEditor"/>" class="nav-link ">Report</a>
 						</li>

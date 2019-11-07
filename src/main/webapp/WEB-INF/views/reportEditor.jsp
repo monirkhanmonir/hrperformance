@@ -49,9 +49,9 @@
 									required="">
 							</div>
 						</div>
-						<div class="form-group contact-forms">						
-						 <textarea class="form-control workEditor"
-								required="" name="workReport"></textarea>
+						<div class="form-group contact-forms">
+						 <textarea class="form-control" id="summernote" name="workReport" required="" rows="10" cols="10"></textarea>						
+						 
 						</div>
 						<div class="text-left click-subscribe">
 							<button type="submit" class="btn btn-block click-me">Send</button>

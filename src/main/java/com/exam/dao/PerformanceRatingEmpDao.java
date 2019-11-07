@@ -26,7 +26,7 @@ public class PerformanceRatingEmpDao implements PerformanceRatingDaoInterF{
 	public List<EmpRating> getRatingById(int id) {
 		
 		List<EmpRating> empReating = sessionFactory.getCurrentSession().createQuery("From EmpRating where empId='"+id+"'").list();
-		
+		System.out.println("dao"+empReating);
 		return empReating;
 		
 		
