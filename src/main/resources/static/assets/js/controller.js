@@ -1,6 +1,7 @@
 app.controller("myCtrl",function($scope,$http){
-	showPerformanceReport();
+	//showPerformanceReport();
 	$scope.rowLimit = 5;
+	var BASE_URL = 'http://localhost:8084/hrp'; 
 
 	$scope.jobKnowledge= undefined || 0;
 	$scope.workquality= undefined || 0;
@@ -28,7 +29,7 @@ app.controller("myCtrl",function($scope,$http){
 	    $scope.showTask = function(){
 	    	var THIS = this;
 	    	
-	    	$http.get("/showtaskById/"+this.taskId)
+	    	$http.get(BASE_URL+"/showtaskById/"+this.taskId)
 	    	.then(function(res){
 	    		if(res.status=='200'){
 	    			console.log(res);
@@ -42,12 +43,14 @@ app.controller("myCtrl",function($scope,$http){
 	    
 	  
 	    
-	    $scope.showEmployee= function(){
+	    $scope.showEmpReport= function(){
 	    
-	    	$http.get("/employee/getEmpById/"+this.id)
+	    	$http.get(BASE_URL+"/performance/ratingRecord/"+this.id)
 	    	.then(function(res){
 	    		if(res.status=='200'){
-	    			$scope.employee = res.data;
+	    			console.log(res);
+	    			$scope.employeeRepo = res.data;
+	    			console.log($scope.employeeRepo);
 	    		}
 	    	}).catch(function(err){
 	    		console.log(err);
@@ -55,18 +58,32 @@ app.controller("myCtrl",function($scope,$http){
 	    }
 	    $scope.msg = "test";
 
-function showPerformanceReport(){
+ $scope.showPerformanceReport = function(){
 	    
-	    	$http.get("/performance/report")
-	    	.then(function(res){
-	    		if(res.status=='200'){
-	    			$scope.ratingList = res.data;	
-	    		console.log($scope.ratingList);
-	    		}
-	    	}).catch(function(err){
-	    		connsole.log(err);
-	    	})
+	    	$http.get(BASE_URL+"/performance/report")
+		    	.then(function(res){
+		    		if(res.status=='200'){
+		    			$scope.ratingList = res.data;	
+		    		console.log($scope.ratingList);
+		    		}
+		    	}).catch(function(err){
+		    		console.log(err);
+		    	})
 	    }
+
+	    
+	/* function showPerformanceReport(){
+		 $http.get(BASE_URL+"/performance/report")
+		 	.then(function(res){
+		 		if(status=='200'){
+		 			console.log(res);
+		 		}
+		 	}).catch(function(err){
+		 		console.log(err);
+		 	})
+	 }*/
+
+
 
 
 	$scope.sortColmn = "name";

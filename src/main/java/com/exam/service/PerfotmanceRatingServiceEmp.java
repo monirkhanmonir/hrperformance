@@ -20,6 +20,11 @@ public class PerfotmanceRatingServiceEmp implements PerformanceRatingServiceInte
 		
 		return performanceRatingDaoInterF.getAllRating();
 	}
+
+	@Override
+	public List<EmpRating> getRatingById(int id) {	
+		return performanceRatingDaoInterF.getRatingById(id);
+	}
 	
 
 }

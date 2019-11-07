@@ -43,6 +43,8 @@
 <link href="//fonts.googleapis.com/css?family=Roboto:400,500"
 	rel="stylesheet">
 <script src="<c:url value="/assets/js/angular.min.js"/>"></script>
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>tinymce.init({selector:'textarea'});</script>
 
 <style type="text/css">
 .arrow-down {

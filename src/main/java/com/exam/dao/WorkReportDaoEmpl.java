@@ -29,6 +29,7 @@ public class WorkReportDaoEmpl implements WorkReportDaoInterF{
 	}
 	@Override
 	public WorkReport getWorkReportByID(int id){
+		System.out.println(sessionFactory.getCurrentSession().get(WorkReport.class, id));
 		
 		return sessionFactory.getCurrentSession().get(WorkReport.class, id);
 	}

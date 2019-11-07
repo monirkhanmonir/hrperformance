@@ -71,7 +71,7 @@
 				style="background-color: rgba(0, 0, 0, 0.2)">
 				<div class="hedder-up">
 					<h1>
-						<a class="navbar-brand" href="<c:url value="/"/>">HR Performance</a>
+						<a class="navbar-brand" href="<c:url value="/managerHome"/>">HR Performance</a>
 					</h1>
 				</div>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -83,7 +83,7 @@
 				<div class="collapse navbar-collapse justify-content-end"
 					id="navbarSupportedContent">
 					<ul class="navbar-nav ">
-						<li class="nav-item active"><a class="nav-link" href="<c:url value="/"/>">Home
+						<li class="nav-item active"><a class="nav-link" href="<c:url value="/managerHome"/>">Home
 								<span class="sr-only">(current)</span>
 						</a></li>
 						 <li class="nav-item"><a href="<c:url value='/user/profile/${pageContext.request.remoteUser}'/>" class="nav-link ">Profile</a>

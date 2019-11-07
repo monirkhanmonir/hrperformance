@@ -6,4 +6,5 @@ import com.exam.model.EmpRating;
 
 public interface PerformanceRatingServiceInterF {
 	public List<EmpRating> getAllRating();
+	public List<EmpRating> getRatingById(int id);
 }

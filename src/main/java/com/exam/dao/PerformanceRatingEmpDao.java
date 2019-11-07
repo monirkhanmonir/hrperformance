@@ -16,16 +16,18 @@ public class PerformanceRatingEmpDao implements PerformanceRatingDaoInterF{
 	public List<EmpRating> getAllRating() {
 		List<EmpRating> ratingLest = sessionFactory.getCurrentSession().createQuery("From EmpRating").list();
 		if(ratingLest!=null) {
-			System.out.println("Kaj ok");
+			System.out.println(" ok");
 		}else {
 			System.out.println("fail");
 		}
 		return ratingLest;
 	}
 	@Override
-	public List<EmpRating> grtRatingById(int id) {
-
-		return null;
+	public List<EmpRating> getRatingById(int id) {
+		
+		List<EmpRating> empReating = sessionFactory.getCurrentSession().createQuery("From EmpRating where empId='"+id+"'").list();
+		
+		return empReating;
 		
 		
 	}	

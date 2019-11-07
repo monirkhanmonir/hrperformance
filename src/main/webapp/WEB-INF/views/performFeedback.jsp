@@ -14,5 +14,29 @@
 </div>
 <!-- //short-->
 <h2>Manager Feedback</h2>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card">
+				<div class="card-header">Featured</div>
+				<div class="card-body">
+					<h5 class="card-title">Special title treatment</h5>
+					<c:forEach var="repo" items="workReport">
+						<div class="col-lg-6">
+							<div class="card">
+								<div class="card-header">Featured</div>
+								<div class="card-body">
+									<h5 class="card-title">Special title treatment</h5>
+									
+								</div>
+							</div>
+						</div>
+
+					</c:forEach>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <jsp:include page="footer.jsp"></jsp:include>

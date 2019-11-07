@@ -50,7 +50,7 @@
 							</div>
 						</div>
 						<div class="form-group contact-forms">						
-						 <textarea class="form-control"
+						 <textarea class="form-control workEditor"
 								required="" name="workReport"></textarea>
 						</div>
 						<div class="text-left click-subscribe">

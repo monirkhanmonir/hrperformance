@@ -39,8 +39,8 @@
 									<tr>
 
 										<th><b>Employee Name:</b></th>
-										<td><select class="form-control" name="empId" ng-model="id"
-											ng-change="showEmployee()">
+										<td><select class="form-control" ng-model="id"
+											ng-change="showEmpReport()">
 												<c:forEach var="repo" items="${workRepo}">
 													<option value="${repo.id}">${repo.empName}</option>
 												</c:forEach>
@@ -49,22 +49,22 @@
 										<td><input type="date" name="ratingDate" class="form-control"/></td>
 									</tr>
 									<tr>
-										<th><b>Job Title: </b></th>
-										<td>{{employee.jobTitle}}</td>
-										<th><b>join Date:</b></th>
-										<td>{{employee.joinDate}}</td>
-									</tr>
-									<tr>
 										<th><b>Employee Id: </b></th>
-										<td><input type="hidden" value="{{employee.id}}" name="empId">
-										<input type="hidden" value="{{employee.name}}" name="empName">
-										<input type="hidden" value="{{employee.jobTitle}}" name="empName">{{employee.id}}</td>
-										<th><b>Manager:</b></th>
-										<td></td>
+										<td>{{employeeRepo.empId}}</td>
+										<th><b>Job Title:</b></th>
+										<td>{{employeeRepo.jobTitle}}</td>
 									</tr>
 									<tr>
-										<th><b>Review Periode: </b></th>
-										<td></td>
+										<th><b>Classification: </b></th>
+										<td><input type="hidden" value="{{employeeRepo.empId}}" name="empId">
+										<input type="hidden" value="{{employeeRepo.empName}}" name="empName">
+										<input type="hidden" value="{{employeeRepo.jobTitle}}" name="jobTitle">{{employeeRepo.repoDuration}}</td>
+										<th><b>Submit Date:</b></th>
+										<td>{{employeeRepo.reopDate}}</td>
+									</tr>
+									<tr>
+										<th><b>Report Details </b></th>
+										<td>{{employeeRepo.workReport}}</td>
 										<th><b>Date:</b></th>
 										<td></td>
 									</tr>

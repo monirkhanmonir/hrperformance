@@ -46,5 +46,10 @@ public class RestTaskController {
 		return ratingList;
 	}
 	
+	@RequestMapping(value = "/managerHome")
+	public ModelAndView getManagerHome() {
+		return new ModelAndView("managerHome");
+	}
+	
 	
 }

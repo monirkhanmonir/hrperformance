@@ -13,11 +13,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.exam.jasperreports.SimpleReportExporter;
@@ -30,7 +30,7 @@ import com.exam.service.PerformanceRatingServiceInterF;
 import com.exam.service.TaskIssueInterFService;
 import com.exam.service.WorkRepoServiceInterF;
 
-@Controller
+@RestController
 @RequestMapping(value = "/performance")
 public class EmpPerformenceController {
 	@Autowired
@@ -39,6 +39,7 @@ public class EmpPerformenceController {
 	EmployeeServiceInterF employeeServiceInterF;
 	@Autowired
 	PerformanceRatingServiceInterF performanceRatingServiceInterF;
+	
 	@Autowired
 	SimpleReportFiller simpleReportFiller;
 	@Autowired
@@ -94,8 +95,8 @@ public class EmpPerformenceController {
 	@GetMapping(value = "/empRating/{id}")
 	public ModelAndView getRatingById(@PathVariable ("id") int id, Map<String, Object> map) {
 		System.out.println(id);
-	WorkReport report = workRepoServiceInterF.getWorkReportByID(id);
-	map.put("workrepo",report);
+		WorkReport report = workRepoServiceInterF.getWorkReportByID(id);
+		map.put("workrepo",report);
 		System.out.println(report);
 
 		return new ModelAndView("EmpShowRating",map);
@@ -204,18 +205,31 @@ public class EmpPerformenceController {
 	
 	@GetMapping(value = "/feedback/{user}")
 	public ModelAndView getFeedbace(@PathVariable("user") String user,Map<String , Object> map) {
-		
-		System.out.println(user);
-		return new ModelAndView("performFeedback");
+		List<Employee> empList = employeeServiceInterF.getByUser(user);
+		int id = empList.get(0).getId();
+		List<EmpRating> test = performanceRatingServiceInterF.getRatingById(id);
+		System.out.println(test);
+		map.put("workReport", test);
+
+		return new ModelAndView("performFeedback",map);
 	}
 	
 	
 	@GetMapping(value = "/ratingRecord/{id}")
-	public ModelAndView getReatingById() {
-		
-		
-		return null;
+	public WorkReport getReatingById(@PathVariable("id") int id) {
+		WorkReport workReport =  workRepoServiceInterF.getWorkReportByID(id);
+		System.out.println(workReport);
+		return workReport;
 	}
+	
+	
+	@GetMapping(value = "/reportTest")
+	public List<EmpRating> getAllRating() {
+		System.out.println("Rating accept");
+		System.out.println(performanceRatingServiceInterF.getAllRating().get(0));	
+		return performanceRatingServiceInterF.getAllRating();
+	}
+	
 	
 
 	

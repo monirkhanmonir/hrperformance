@@ -19,6 +19,9 @@
 		<div class=" py-lg-5 py-md-4 py-sm-4 py-3">
 			<h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Employee
 				Performance rating</h3>
+				
+				<button class="btn btn-success" ng-click="showPerformanceReport()">Check</button>
+						
 			<div class="row">
 				<div class="col-lg-12 col-md-12 ">
 					<div class="info-para">
@@ -28,18 +31,7 @@
 							<div class="card-header">Employee Report</div>
 							<div class="card-body">
 								<div class="row">
-									<div class="col-lg-4 col-md-4">
-									
-									<form action="/performance/byId" method="post">									
-									<div class="form-group row">
-											<label  class="col-sm-5 col-form-label">Print By Id: </label>
-											<div class="col-sm-7">
-												<input type="number" min="0" max="10"
-											step="1"  class="form-control" name="id">
-											<input type="submit" value="Show PDF" class="btn btn-info"/> 
-											</div>
-										</div>
-									</form>								
+									<div class="col-lg-4 col-md-4">														
 										<div class="form-group row">
 											<label for="staticEmail" class="col-sm-5 col-form-label">Roles to display: </label>
 											<div class="col-sm-7">

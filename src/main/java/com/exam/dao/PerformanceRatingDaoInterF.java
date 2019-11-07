@@ -6,5 +6,5 @@ import com.exam.model.EmpRating;
 
 public interface PerformanceRatingDaoInterF {
 	public List<EmpRating> getAllRating();
-	public List<EmpRating> grtRatingById(int id);
+	public List<EmpRating> getRatingById(int id);
 }
