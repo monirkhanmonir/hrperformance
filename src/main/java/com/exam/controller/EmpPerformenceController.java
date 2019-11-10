@@ -45,7 +45,7 @@ public class EmpPerformenceController {
 	@Autowired
 	WorkRepoServiceInterF workRepoServiceInterF;
 	
-	
+
 
 	@GetMapping(value = "/ratingRecord")
 	public ModelAndView getRetirementPage(Map<String, Object> map) {
@@ -80,6 +80,14 @@ public class EmpPerformenceController {
 		rating.setRatingDate(req.getParameter("ratingDate"));
 		rating.setEmpName(req.getParameter("empName"));
 		rating.setJobTitle(req.getParameter("jobTitle"));
+		
+		
+		
+		WorkReport wr = new WorkReport();
+		wr = workRepoServiceInterF.getWorkReportByID(Integer.parseInt(req.getParameter("id")));
+		
+		wr.setRepoStatus("Done");
+		workRepoServiceInterF.updateRepoStatus(wr);
 		taskIssueInterFService.storePerformanceRating(rating);
 		return new ModelAndView("redirect:/performance/ratingRecord");
 	}

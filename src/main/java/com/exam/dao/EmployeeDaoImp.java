@@ -16,7 +16,7 @@ public class EmployeeDaoImp implements EmployeeInterF{
 	
 	@Override
 	public void storeEmployee(Employee emp) {
-		sessionFactory.getCurrentSession().save(emp);
+		sessionFactory.getCurrentSession().saveOrUpdate(emp);
 		
 	}
 	@Override
@@ -40,6 +40,12 @@ public class EmployeeDaoImp implements EmployeeInterF{
 //		.createQuery("From TaskIssue task where task.empId=:empId and task.issueStatus='Begin'")
 //		.setParameter("empId", empId).list();
 		return emp;
+	}
+	@Override
+	public void empDelete(int id) {
+		
+	Employee emp = 	sessionFactory.getCurrentSession().get(Employee.class, id);
+	sessionFactory.getCurrentSession().delete(emp);
 	}
 	
 	

@@ -94,4 +94,11 @@ public class employeeController {
 		return new ModelAndView("reportEditor");
 	}
 	
+	
+	@RequestMapping(value = "/delete/{id}")
+	public ModelAndView employeeEdit(@PathVariable("id")int id) {
+		employeeServiceInterF.empDelete(id);
+		return new ModelAndView("redirect:/employee/showAllEmployee");
+	}
+	
 }

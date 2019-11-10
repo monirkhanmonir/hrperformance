@@ -110,7 +110,7 @@
                                     
 									 <a href="<c:url value='/task/status'/>" class="nav-link">Task Status</a>
 							</div></li>
-						<li class="nav-item"><a href="<c:url value='/contactus'/>" class="nav-link">Contact</a>
+						<%-- <li class="nav-item"><a href="<c:url value='/contactus'/>" class="nav-link">Contact</a> --%>
 						</li>
 						<li class="nav-button">
 							<button type="button" class="btn login-hedder"

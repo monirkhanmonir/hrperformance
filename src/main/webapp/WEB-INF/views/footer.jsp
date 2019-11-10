@@ -233,11 +233,34 @@
 	src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
 
 
-<script>
+
+
+
+
+<!-- for sumernote -->
+
+<!-- <script>
 	$(document).ready(function() {
 		$('#summernote').summernote();
 	});
+</script> -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
+<script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
+<script>
+	CKEDITOR.replace('editor1');
 </script>
+
+
+
+
+
+
+
+
+
+
 
 
 <script src="<c:url value='/assets/js/bootstrap.min.js'/>"></script>

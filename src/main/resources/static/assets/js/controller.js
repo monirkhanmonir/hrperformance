@@ -43,6 +43,9 @@ app.controller("myCtrl",function($scope,$http){
 	    
 	  
 	    
+	    
+	    $scope.msgteste="<h1>Hi</h1>";
+	    
 	    $scope.showEmpReport= function(){
 	    
 	    	$http.get(BASE_URL+"/performance/ratingRecord/"+this.id)
@@ -50,7 +53,9 @@ app.controller("myCtrl",function($scope,$http){
 	    		if(res.status=='200'){
 	    			console.log(res);
 	    			$scope.employeeRepo = res.data;
-	    			console.log($scope.employeeRepo);
+	    			$scope.workReport =$scope.employeeRepo.workReport;
+	    			//console.log($scope.employeeRepo.workReport);
+	    			
 	    		}
 	    	}).catch(function(err){
 	    		console.log(err);

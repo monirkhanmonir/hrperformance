@@ -16,6 +16,7 @@
 <form action="<c:url value='/employee/employeeRegister'/>" method="post">
 	<div class="row wls-contact-mid">
 		<div class="col-md-6 col-sm-6 form-group contact-forms">
+		<input type="hidden" value="${employeeEdit.id}">
 			<input type="text" class="form-control" placeholder="Employee Name"
 				required="" name="empName" value="${employeeEdit.empName}">
 		</div>

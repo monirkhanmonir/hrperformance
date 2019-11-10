@@ -14,4 +14,6 @@
 <!-- //short-->
 <h2>About Us</h2>
 
+
+
 <jsp:include page="footer.jsp"></jsp:include>

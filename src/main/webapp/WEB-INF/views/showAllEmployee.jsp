@@ -54,9 +54,10 @@
 
 				<td>
 					 <a href="<c:url value="/employee/editemp/${employee.id}"/>"
-					class="btn btn-primary"><i class="fa fa-edit"></i>Edit</a>
+					class="btn btn-success"><i class="fa fa-edit"></i>Edit</a>
 					
-					<button class="btn btn-danger">Delete</button>
+					<a href="<c:url value="/employee/delete/${employee.id}"/>"
+					class="btn btn-danger"><i class="fa fa-edit"></i>Delete</a>
 				</td>
 			</tr>
 		</c:forEach>

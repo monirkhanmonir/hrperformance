@@ -9,5 +9,6 @@ public interface EmployeeInterF {
 	public List<Employee> getAll();
 	public Employee getById(int id);
 	public List<Employee> getByUser(String user);
+	public void empDelete(int id);
 	
 }

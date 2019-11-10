@@ -1,5 +1,7 @@
 package com.exam.service;
 
+
+
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -35,6 +37,12 @@ public class WorkRepoServiceImpl implements WorkRepoServiceInterF{
 	public WorkReport getWorkReportByID(int id) {
 		
 		return workreportDaoEmpl.getWorkReportByID(id);
+	}
+
+	@Override
+	public void updateRepoStatus(WorkReport report) {
+		
+		workreportDaoEmpl.updateRepoStatus(report);
 	}
 
 

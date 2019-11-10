@@ -32,21 +32,22 @@
 							<div class="alert alert-primary" role="alert">
 								<p>Employee task Feedback Information</p>
 							</div>
-							<form action="<c:url value="/performance/storeRating"/>" method="post"
-								ng-app="myApp" ng-controller="myCtrl">
+							<form action="<c:url value="/performance/storeRating"/>"
+								method="post" ng-app="myApp" ng-controller="myCtrl">
 								<table class="table table-bordered table-sm">
 
 									<tr>
 
 										<th><b>Employee Name:</b></th>
 										<td><select class="form-control" ng-model="id"
-											ng-change="showEmpReport()">
+											ng-change="showEmpReport()" name="id">
 												<c:forEach var="repo" items="${workRepo}">
 													<option value="${repo.id}">${repo.empName}</option>
 												</c:forEach>
 										</select></td>
 										<th>Rating Date</th>
-										<td><input type="date" name="ratingDate" class="form-control"/></td>
+										<td><input type="date" name="ratingDate"
+											class="form-control" required="required" /></td>
 									</tr>
 									<tr>
 										<th><b>Employee Id: </b></th>
@@ -56,22 +57,26 @@
 									</tr>
 									<tr>
 										<th><b>Classification: </b></th>
-										<td><input type="hidden" value="{{employeeRepo.empId}}" name="empId">
-										<input type="hidden" value="{{employeeRepo.empName}}" name="empName">
-										<input type="hidden" value="{{employeeRepo.jobTitle}}" name="jobTitle">{{employeeRepo.repoDuration}}</td>
+										<td><input type="hidden" value="{{employeeRepo.empId}}"
+											name="empId"> <input type="hidden"
+											value="{{employeeRepo.empName}}" name="empName"> <input
+											type="hidden" value="{{employeeRepo.jobTitle}}"
+											name="jobTitle">{{employeeRepo.repoDuration}}</td>
 										<th><b>Submit Date:</b></th>
 										<td>{{employeeRepo.reopDate}}</td>
 									</tr>
-									<tr>
+									<!--  <tr>
 										<th><b>Report Details </b></th>
 										<td>{{employeeRepo.workReport}}</td>
 										<th><b>Date:</b></th>
-										<td></td>
-									</tr>
+										<td><p ng-bind-html="msgteste"></p></td>
+									</tr>  -->
 
 								</table>
-
-
+								<h5>Employ Work Sheet</h5>
+								<div class="overflow-auto" ng-bind-html="workReport" style="width: 100%; height: 300px; border: 1px solid;">
+									
+								</div>
 
 								<div class="alert alert-primary" role="alert">
 									<h5>Employee Performance Ratings</h5>

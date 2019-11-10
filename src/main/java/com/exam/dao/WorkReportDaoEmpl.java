@@ -33,6 +33,11 @@ public class WorkReportDaoEmpl implements WorkReportDaoInterF{
 		
 		return sessionFactory.getCurrentSession().get(WorkReport.class, id);
 	}
+	@Override
+	public void updateRepoStatus(WorkReport workReport) {
+	
+	sessionFactory.getCurrentSession().update(workReport);
+	}
 	
 
 	
