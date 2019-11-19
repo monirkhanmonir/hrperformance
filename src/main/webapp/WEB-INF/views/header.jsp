@@ -27,7 +27,7 @@
 	type="text/css" media="all"/>
 <!--//booststrap end-->
 <!-- font-awesome icons -->
-<link href="<c:url value="assets/css/font-awesome.css"/>" rel="stylesheet"/>
+<%-- <link href="<c:url value="assets/css/font-awesome.css"/>" rel="stylesheet"/> --%>
 <!-- //font-awesome icons -->
 <!--stylesheets-->
 <link href="<c:url value="/assets/css/style.css"/>" rel='stylesheet' type='text/css'
@@ -37,11 +37,7 @@
 	
 	
 <!--//stylesheets-->
-<link
-	href="<c:url value='//fonts.googleapis.com/css?family=Mukta+Malar:400,500,600,700'/>"
-	rel="stylesheet">
-<link href="<c:url value='//fonts.googleapis.com/css?family=Roboto:400,500'/>"
-	rel="stylesheet">
+
 <script src="<c:url value="/assets/js/angular.min.js"/>"></script>
 
 <style type="text/css">

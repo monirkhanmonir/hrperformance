@@ -140,14 +140,14 @@
 			</div>
 			<div class="col-lg-4 col-md-4 ser-service gap-service text-center">
 				<div class="service-icon-one">
-					<img src="images/ser1.png" alt="" class="img-fluid">
+					
 				</div>
 			</div>
 		</div>
 		<div class=" my-lg-5 my-md-4 my-sm-4 my-3 row mid-service">
 			<div class="col-lg-4 col-md-4 ser-service  text-center">
 				<div class="service-icon-two move-right">
-					<img src="images/ser2.png" alt="" class="img-fluid">
+					
 				</div>
 			</div>
 			<div class="col-lg-8 col-md-8 service-wthree-info-left">
@@ -178,7 +178,7 @@
 			</div>
 			<div class="col-lg-4 col-md-4 ser-service gap-service text-center">
 				<div class="service-icon-three">
-					<img src="images/ser3.png" alt="" class="img-fluid">
+					
 				</div>
 			</div>
 		</div>
@@ -194,7 +194,7 @@
 			<div class="col-lg-3 col-md-6 col-sm-6 ser-icon text-center">
 				<div class="team-position">
 					<div class="icon-wthree-top">
-						<img src="images/t1.jpg" alt="" class="img-fluid">
+						
 					</div>
 					<div class="team-text-wthree">
 						<h4>Sam Deo</h4>
@@ -214,7 +214,7 @@
 			<div class="col-lg-3 col-md-6 col-sm-6 ser-icon text-center">
 				<div class="team-position">
 					<div class="icon-wthree-top">
-						<img src="images/t2.jpg" alt="" class="img-fluid">
+						
 					</div>
 					<div class="team-text-wthree">
 						<h4>Max Will</h4>
@@ -234,7 +234,7 @@
 			<div class="col-lg-3 col-md-6 col-sm-6 ser-icon text-center">
 				<div class="team-position">
 					<div class="icon-wthree-top">
-						<img src="images/t3.jpg" alt="" class="img-fluid">
+					
 					</div>
 					<div class="team-text-wthree">
 						<h4>Ray Son</h4>
@@ -254,7 +254,7 @@
 			<div class="col-lg-3 col-md-6 col-sm-6 ser-icon text-center">
 				<div class="team-position">
 					<div class="icon-wthree-top">
-						<img src="images/t4.jpg" alt="" class="img-fluid">
+						
 					</div>
 					<div class="team-text-wthree">
 						<h4>Zone Hill</h4>
@@ -293,7 +293,7 @@
 							<div class="col-lg-4 clients-gride-img ">
 								<div class="clients-gride-grid">
 									<div class="mb-3 clients-w3pvt-img">
-										<img src="images/c1.jpg" alt=" " class="img-fluid">
+										
 									</div>
 									<div class="clients-color-wthree text-center">
 										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -309,7 +309,7 @@
 							<div class="col-lg-4 clients-gride-img ">
 								<div class="clients-gride-grid">
 									<div class="mb-3 clients-w3pvt-img">
-										<img src="images/c2.jpg" alt=" " class="img-fluid">
+										
 									</div>
 									<div class="clients-color-wthree text-center">
 										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -325,7 +325,7 @@
 							<div class="col-lg-4 clients-gride-img ">
 								<div class="clients-gride-grid">
 									<div class="mb-3 clients-w3pvt-img">
-										<img src="images/c3.jpg" alt=" " class="img-fluid">
+										
 									</div>
 									<div class="clients-color-wthree text-center">
 										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -345,7 +345,7 @@
 							<div class="col-lg-4 clients-gride-img">
 								<div class="clients-gride-grid">
 									<div class="mb-3 clients-w3pvt-img">
-										<img src="images/c1.jpg" alt=" " class="img-fluid">
+										
 									</div>
 									<div class="clients-color-wthree text-center">
 										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -361,7 +361,7 @@
 							<div class="col-lg-4 clients-gride-img">
 								<div class="clients-gride-grid">
 									<div class="mb-3 clients-w3pvt-img">
-										<img src="images/c2.jpg" alt=" " class="img-fluid">
+									
 									</div>
 									<div class="clients-color-wthree text-center">
 										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -377,7 +377,7 @@
 							<div class="col-lg-4 clients-gride-img">
 								<div class="clients-gride-grid">
 									<div class="mb-3 clients-w3pvt-img">
-										<img src="images/c3.jpg" alt=" " class="img-fluid">
+										
 									</div>
 									<div class="clients-color-wthree text-center">
 										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -398,7 +398,7 @@
 							<div class="col-lg-4 clients-gride-img ">
 								<div class="clients-gride-grid">
 									<div class="mb-3 clients-w3pvt-img">
-										<img src="images/c1.jpg" alt=" " class="img-fluid">
+										
 									</div>
 									<div class="clients-color-wthree text-center">
 										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -414,7 +414,7 @@
 							<div class="col-lg-4 clients-gride-img">
 								<div class="clients-gride-grid">
 									<div class="mb-3 clients-w3pvt-img">
-										<img src="images/c2.jpg" alt=" " class="img-fluid">
+										
 									</div>
 									<div class="clients-color-wthree text-center">
 										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -430,7 +430,7 @@
 							<div class="col-lg-4 clients-gride-img">
 								<div class="clients-gride-grid">
 									<div class="mb-3 clients-w3pvt-img">
-										<img src="images/c3.jpg" alt=" " class="img-fluid">
+										
 									</div>
 									<div class="clients-color-wthree text-center">
 										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing

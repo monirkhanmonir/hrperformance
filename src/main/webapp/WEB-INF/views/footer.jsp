@@ -180,7 +180,7 @@
 </script>
 <!-- //OnScroll-Number-Increase-JavaScript -->
 <!-- start-smoth-scrolling -->
-<script src="<c:url value='assets/js/move-top.js'/>"></script>
+
 <script src="<c:url value='/assets/js/easing.js'/>"></script>
 <script>
 	$(window).load(function() {

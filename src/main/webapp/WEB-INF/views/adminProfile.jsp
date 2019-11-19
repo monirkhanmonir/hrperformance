@@ -7,7 +7,7 @@
 <div class="using-border py-3">
 	<div class="inner_breadcrumb  ml-4">
 		<ul class="short_ls">
-			<li><a href="index.html">Home</a> <span>/ /</span></li>
+			<li><a href="<c:url="index.html"/>">Home</a> <span>/ /</span></li>
 			<li>Profile</li>
 		</ul>
 	</div>
