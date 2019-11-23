@@ -1,15 +1,15 @@
-CREATE DATABASE  IF NOT EXISTS `performancemanagement`;
+CREATE DATABASE  IF NOT EXISTS `performancemanagement` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `performancemanagement`;
--- MySQL dump 10.13  Distrib 8.0.16, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.5.16, for Win32 (x86)
 --
--- Host: 127.0.0.1    Database: performancemanagement
+-- Host: localhost    Database: performancemanagement
 -- ------------------------------------------------------
--- Server version	5.7.26-log
+-- Server version	5.1.60-community
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
- 
+/*!40101 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -23,7 +23,7 @@ USE `performancemanagement`;
 
 DROP TABLE IF EXISTS `employee`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- 
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `employee` (
   `id` int(11) NOT NULL,
   `address` varchar(255) DEFAULT NULL,
@@ -35,6 +35,7 @@ CREATE TABLE `employee` (
   `joinDate` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `repassword` varchar(255) DEFAULT NULL,
+  `user` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -45,7 +46,7 @@ CREATE TABLE `employee` (
 
 LOCK TABLES `employee` WRITE;
 /*!40000 ALTER TABLE `employee` DISABLE KEYS */;
-INSERT INTO `employee` VALUES (1,'sdcddv','2019-10-02','monir@gmail.com','Monir','Male','Area Manager','2019-10-15','123','123'),(2,'Dhaka, Bangladesh','2019-10-15','asif@gmail.com','Asif','Male','Area Manager','2019-10-16','123','123'),(3,'wdw','2019-10-02','monir@gmail.com','Monir',NULL,'Select job title','2019-10-15','123','123'),(7,'dvdddddddddddd','2019-10-09','monir@gmail.com','monir','Employee','Seals Representative','2019-10-15','123','123'),(8,'dcdcd','2019-10-21','alim@gmail.com','alim','Admin','Manager','2019-10-01','123','123'),(9,'dccdcd','2019-10-08','habib@gmail.com','habib','Male','Area Manager','2019-10-16','123','123');
+INSERT INTO `employee` VALUES (15,'fdhggfh','2019-10-10','asif@gmail.com','asif','Male','Area Manager','2019-10-08','123','123',NULL),(16,'asff','2019-10-09','faruk@gmail.com','faruk',NULL,'Manager','2019-10-09','faruk','faruk',NULL),(17,'sgfdg','2019-10-09','enamul@shgfh','enamul','Male','Manager','2019-10-17','123','123',NULL),(18,'fhgh','2019-11-14','jitu@gmail.com','Jitu','Male','Manager','2019-11-06','123','123','jitu'),(20,'gfh','2019-10-30','habib@gmail.com','Habib','Male','Seals Representative','2019-11-08','123','123','habib'),(24,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(25,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(26,'eff',NULL,'Email@gmail.com','Name',NULL,'123',NULL,'manager',NULL,'user');
 /*!40000 ALTER TABLE `employee` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -55,7 +56,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `emprating`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- 
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `emprating` (
   `ratingId` int(11) NOT NULL,
   `additionalCmnt` varchar(255) DEFAULT NULL,
@@ -74,6 +75,8 @@ CREATE TABLE `emprating` (
   `workquality` varchar(255) DEFAULT NULL,
   `workqualityCmnt` varchar(255) DEFAULT NULL,
   `ratingDate` varchar(255) DEFAULT NULL,
+  `empName` varchar(255) DEFAULT NULL,
+  `jobTitle` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ratingId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -84,7 +87,7 @@ CREATE TABLE `emprating` (
 
 LOCK TABLES `emprating` WRITE;
 /*!40000 ALTER TABLE `emprating` DISABLE KEYS */;
-INSERT INTO `emprating` VALUES (12,'sdsdsd','3','sds','5','sdsd','4','sd',2,'1','sdc','19','4','sd','2','sds',NULL);
+INSERT INTO `emprating` VALUES (12,'sdsdsd','3','sds','5','sdsd','4','sd',2,'1','sdc','19','4','sd','2','sds',NULL,NULL,NULL),(19,'ert','2','ert','3','et','3','ert',18,'1','ert','13','2','ert','2','ert','',NULL,NULL),(22,'ertrtr','2','ertr','3','ertrt','3','ertrt',1,'1','tert','14','3','ertert','2','ertrt','2019-11-12','Habib','Seals Representative'),(23,'wrer',NULL,'','3','','3','',20,'2','','11',NULL,'','3','','','Habib','Seals Representative');
 /*!40000 ALTER TABLE `emprating` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -94,7 +97,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `hibernate_sequence`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- 
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `hibernate_sequence` (
   `next_val` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -106,7 +109,7 @@ CREATE TABLE `hibernate_sequence` (
 
 LOCK TABLES `hibernate_sequence` WRITE;
 /*!40000 ALTER TABLE `hibernate_sequence` DISABLE KEYS */;
-INSERT INTO `hibernate_sequence` VALUES (13);
+INSERT INTO `hibernate_sequence` VALUES (27);
 /*!40000 ALTER TABLE `hibernate_sequence` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -116,7 +119,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `taskissue`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- 
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `taskissue` (
   `taskId` varchar(255) NOT NULL,
   `assignName` varchar(255) DEFAULT NULL,
@@ -139,7 +142,7 @@ CREATE TABLE `taskissue` (
 
 LOCK TABLES `taskissue` WRITE;
 /*!40000 ALTER TABLE `taskissue` DISABLE KEYS */;
-INSERT INTO `taskissue` VALUES ('222','Select One',0,'','Select One','Select Status','','','',10,NULL),('332','Manager',12,'2019-10-15','Optional','Done','nbzdfgh','2019-10-15','zxfgh',54,'2019-10-22'),('ss22','Hr',12,'2019-10-15','Normal','Done','wdw','2019-10-18','sdf',2,'2019-10-17');
+INSERT INTO `taskissue` VALUES ('23r3','Manager',12,'2019-10-03','Urgent','Begin',';k','2019-10-16','ds',21,NULL),('332','Manager',12,'2019-10-15','Optional','Done','nbzdfgh','2019-10-15','zxfgh',54,'2019-10-22'),('dew','Manager',21,'2019-11-14','Normal','Begin','hfhfh','2019-11-08','ds',46,NULL),('name','Select One',21,'2019-11-14','Select One','Begin','','2019-11-08','ds',46,NULL);
 /*!40000 ALTER TABLE `taskissue` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -149,7 +152,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `userinfo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- 
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `userinfo` (
   `userId` bigint(20) NOT NULL AUTO_INCREMENT,
   `createdDate` datetime DEFAULT NULL,
@@ -163,7 +166,7 @@ CREATE TABLE `userinfo` (
   `username` varchar(12) NOT NULL,
   `empName` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`userId`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -172,17 +175,39 @@ CREATE TABLE `userinfo` (
 
 LOCK TABLES `userinfo` WRITE;
 /*!40000 ALTER TABLE `userinfo` DISABLE KEYS */;
-INSERT INTO `userinfo` VALUES (1,NULL,'asif@gmail.com',_binary '\0','asif','asif','$2a$10$ctEi5/YMBuv4YBGcUKs0xu3arg14qW5K2UCLaDgc7z2Q6q6xX0mAm','Admin',NULL,'asif',NULL),(2,NULL,'monir@gmail.com',_binary '\0','monir',NULL,'123','Employee',NULL,'monir',NULL),(3,NULL,'alim@gmail.com',_binary '\0','alim',NULL,'123','Admin',NULL,'alim',NULL),(4,NULL,'habib@gmail.com',_binary '\0','habib',NULL,'123','Employee',NULL,'habibahmed',NULL);
+INSERT INTO `userinfo` VALUES (1,NULL,'asif@gmail.com','\0','asif','asif','$2a$10$ctEi5/YMBuv4YBGcUKs0xu3arg14qW5K2UCLaDgc7z2Q6q6xX0mAm','Admin',NULL,'asif',NULL),(5,NULL,'alim@gmail.com','','alim',NULL,'$2a$10$2yOUmNpTgumyrwGjxZiaA.9jxy1LGtJUA2DuYfBhYEfgrSeXrTWui','Manager',NULL,'alim',NULL),(7,NULL,'faruk@gmail.com','\0','faruk',NULL,'$2a$10$3zaiYqdF6UNe3Wj0Q1PEJ.5o3gSwGJJmBnb7qWg7MZ7djvguRbLdC','Manager',NULL,'dfaruk',NULL),(8,NULL,'enamul@shgfh','\0','enamul',NULL,'$2a$10$LFsnq.Q3AtCVPAQ2e9Jl9O5z.4KcHp9tW/358aOfBSz52vB9L8ueO','Manager',NULL,'fhg',NULL),(9,NULL,'jitu@gmail.com','\0','Jitu',NULL,'$2a$10$uH8gflvLfu7kjLGsql2sbe/9R518KdQ7uc5BbuQ.hqtG9BPhCz4gC','Manager',NULL,'jitu',NULL),(10,NULL,'habib@gmail.com','\0','Habib',NULL,'$2a$10$qBYh1EBQH57VvvC0LdWUq.zXTVXqe.RshpDPDRsgFVHhy68TQzcT6','Employee',NULL,'habib',NULL),(11,NULL,'munna@gthyt','\0','munna',NULL,'$2a$10$ZApELoM1r/kTqL6Z3aRJKul4yk16fcee2bAPOWywBROaPNAN8oihy','Employee',NULL,'munna',NULL);
 /*!40000 ALTER TABLE `userinfo` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Dumping events for database 'performancemanagement'
+-- Table structure for table `workreport`
 --
 
+DROP TABLE IF EXISTS `workreport`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `workreport` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `empId` int(11) NOT NULL,
+  `empName` varchar(255) DEFAULT NULL,
+  `jobTitle` varchar(255) DEFAULT NULL,
+  `reopDate` varchar(255) DEFAULT NULL,
+  `repoDuration` varchar(255) DEFAULT NULL,
+  `repoStatus` varchar(255) DEFAULT NULL,
+  `workReport` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
 --
--- Dumping routines for database 'performancemanagement'
+-- Dumping data for table `workreport`
 --
+
+LOCK TABLES `workreport` WRITE;
+/*!40000 ALTER TABLE `workreport` DISABLE KEYS */;
+INSERT INTO `workreport` VALUES (1,20,'Habib','Seals Representative','2019-11-15','Monthly','applay','wrer'),(2,20,'Habib','Seals Representative','2019-11-07','Quarterly','applay',NULL);
+/*!40000 ALTER TABLE `workreport` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -193,4 +218,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-25 13:53:38
+-- Dump completed on 2019-11-23 11:40:27
