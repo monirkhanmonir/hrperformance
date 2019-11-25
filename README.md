@@ -36,7 +36,7 @@
 <li>Order task to Employee.</li>
 <li>Monitoring task.</li>
 <li>Show Employee Report.</li>
-<li>Marking and Comment Employee Performance based<br /> on Employee Report and Otherwise.</li>
+<li>Marking and Comment Employee Performance based on Employee Report and Otherwise.</li>
 <li></li>
 </ul>
 <b>Admin Module</b>
