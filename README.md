@@ -5,7 +5,7 @@
 <tr><th>Type</th><th>Web Application (Personal Project)</th></tr>
 <tr>
 <td>Used Technologies</td>
-<td>Spring MVC,Rest API,AJAX,Hibernate.</td>
+<td>Spring MVC, Rest API, AJAX, Hibernate.</td>
 </tr>
 <tr>
 <td>Tools</td>
