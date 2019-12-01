@@ -21,10 +21,12 @@ import com.exam.model.EmpRating;
 import com.exam.model.Employee;
 import com.exam.model.TaskIssue;
 import com.exam.model.UserInfo;
+import com.exam.model.WorkReport;
 import com.exam.service.EmployeeServiceInterF;
 import com.exam.service.PerformanceRatingServiceInterF;
 import com.exam.service.TaskIssueInterFService;
 import com.exam.service.UserInfoService;
+import com.exam.service.WorkRepoServiceInterF;
 
 
 @RestController
@@ -41,6 +43,9 @@ public class RestTaskController {
 	PasswordEncoder passwordEncoder;
 	@Autowired
 	UserInfoService userInfoService;
+	
+	@Autowired
+	WorkRepoServiceInterF workRepoServiceInterF;
 	
 	@RequestMapping(value = "showtaskById/{id}")
 	public TaskIssue getTest(@PathVariable String id) {	
@@ -84,6 +89,31 @@ public class RestTaskController {
 		 employeeServiceInterF.storeEmployee(employee);
 
 		return employee;
+	}
+	
+	
+	@GetMapping(value = "/empReport")
+	public List<WorkReport> getRetirementPage() {	
+		
+		return workRepoServiceInterF.getAllApplyRepo();
+	
+	}
+	
+	@GetMapping(value = "/loginn/{user}/{psd}")
+	public Employee getLoginUser(@PathVariable String user, @PathVariable String psd) {
+		System.out.println("user name Is: " + user);
+		System.out.println("Password name Is: " + psd);
+		Employee employee = employeeServiceInterF.getUserLogin(user, psd);
+		System.out.println(employee.toString());
+		return employee;
+	}
+	
+	@PostMapping(value = "/storeTaring")
+	public EmpRating storeRating(@RequestBody EmpRating empRating) {
+		System.out.println();
+		System.out.println(empRating.getEmpName());
+		return	taskIssueInterFService.storePerformanceRating(empRating);
+		
 	}
 	
 	

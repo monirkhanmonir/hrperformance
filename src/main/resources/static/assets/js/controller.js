@@ -1,5 +1,5 @@
 app.controller("myCtrl",function($scope,$http){
-	//showPerformanceReport();
+	// showPerformanceReport();
 	$scope.rowLimit = 5;
 	var BASE_URL = 'http://localhost:8084/hrp'; 
 
@@ -54,7 +54,7 @@ app.controller("myCtrl",function($scope,$http){
 	    			console.log(res);
 	    			$scope.employeeRepo = res.data;
 	    			$scope.workReport =$scope.employeeRepo.workReport;
-	    			//console.log($scope.employeeRepo.workReport);
+	    			// console.log($scope.employeeRepo.workReport);
 	    			
 	    		}
 	    	}).catch(function(err){
@@ -76,27 +76,12 @@ app.controller("myCtrl",function($scope,$http){
 		    	})
 	    }
 
-	    
-	/* function showPerformanceReport(){
-		 $http.get(BASE_URL+"/performance/report")
-		 	.then(function(res){
-		 		if(status=='200'){
-		 			console.log(res);
-		 		}
-		 	}).catch(function(err){
-		 		console.log(err);
-		 	})
-	 }*/
-
-
-
-
-	$scope.sortColmn = "name";
-	$scope.reverseSort = false;
+	$scope.sortColmn = "empName";
+	$scope.reverseSort = true;
 	$scope.sortData = function(column){
 		$scope.reverseSort = ($scope.sortColmn == column)? !$scope.reverseSort:false;
 		$scope.sortColmn = column;
-	}
+	};
 	$scope.gateSortClass = function(column){
 		if($scope.sortColmn==column){
 			return	$scope.reverseSort ? 'arrow-down':'arrow-up'

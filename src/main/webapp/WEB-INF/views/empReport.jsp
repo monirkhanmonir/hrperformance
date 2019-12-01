@@ -57,30 +57,30 @@
 										<tr>
 											<th>Serial No</th>
 											<th>Employee Id</th>
-											<th ng-click="sortData('name')">Name <span
-												ng-class="gateSortClass('name')"></span>
+											<th ng-click="sortData('empName')">Name <span
+												ng-class="gateSortClass('empName')"></span>
 											</th>
 											<th>Job Title</th>
 											<th ng-click="sortData('attendance')">Attendance <span
 												ng-class="gateSortClass('attendance')"></span>
 											</th>
-											<th ng-click="sortData('CommunicationSkills')">Communication
-												Skills <span ng-class="gateSortClass('CommunicationSkills')"></span>
+											<th ng-click="sortData('communicationSkills')">Communication
+												Skills <span ng-class="gateSortClass('communicationSkills')"></span>
 											</th>
 											<th ng-click="sortData('dependability')">Dependability <span
 												ng-class="gateSortClass('dependability')"></span>
 											</th>
-											<th ng-click="sortData('JobKnowledge')">Job Knowledge <span
-												ng-class="gateSortClass('JobKnowledge')"></span>
+											<th ng-click="sortData('jobKnowledge')">Job Knowledge <span
+												ng-class="gateSortClass('jobKnowledge')"></span>
 											</th>
-											<th ng-click="sortData('Productivity')">Productivity <span
-												ng-class="gateSortClass('Productivity')"></span>
+											<th ng-click="sortData('productivity')">Productivity <span
+												ng-class="gateSortClass('productivity')"></span>
 											</th>
-											<th ng-click="sortData('WorkQuality')">Work Quality <span
-												ng-class="gateSortClass('WorkQuality')"></span>
+											<th ng-click="sortData('workquality')">Work Quality <span
+												ng-class="gateSortClass('workquality')"></span>
 											</th>
-											<th ng-click="sortData('OverallRating')">Overall Rating
-												<span ng-class="gateSortClass('OverallRating')"></span>
+											<th ng-click="sortData('overallRating')">Overall Rating
+												<span ng-class="gateSortClass('overallRating')"></span>
 											</th>
 										</tr>
 									</thead>

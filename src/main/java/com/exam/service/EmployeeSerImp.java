@@ -45,6 +45,12 @@ public class EmployeeSerImp implements EmployeeServiceInterF{
 		
 		employeeInterF.empDelete(id);
 	}
+
+	@Override
+	public Employee getUserLogin(String user, String psd) {
+		
+		return employeeInterF.getUserLogin(user, psd);
+	}
 	
 	
 }

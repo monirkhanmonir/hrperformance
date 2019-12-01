@@ -10,5 +10,6 @@ public interface EmployeeInterF {
 	public Employee getById(int id);
 	public List<Employee> getByUser(String user);
 	public void empDelete(int id);
+	public Employee getUserLogin(String user, String psd);
 	
 }

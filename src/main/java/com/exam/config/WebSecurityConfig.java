@@ -36,6 +36,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 				.antMatchers("/allEmployee").permitAll()
 				.antMatchers("/performance/report").permitAll()
 				.antMatchers("/storeEmp").permitAll()
+				.antMatchers("/empReport").permitAll()
+				.antMatchers("/storeTaring").permitAll()
+				.antMatchers("/loginn").permitAll()
 				.antMatchers("/**").authenticated()				
 			.and()
 			.formLogin()
@@ -43,8 +46,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 			.defaultSuccessUrl("/login-success",true)
 			.and()
 			.logout();
-			
-		
 	}
 	
 	@Bean
