@@ -99,7 +99,7 @@ public class RestTaskController {
 	
 	}
 	
-	@GetMapping(value = "/loginn/{user}/{psd}")
+	@GetMapping(value = "/login/{user}/{psd}")
 	public Employee getLoginUser(@PathVariable String user, @PathVariable String psd) {
 		System.out.println("user name Is: " + user);
 		System.out.println("Password name Is: " + psd);
