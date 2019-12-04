@@ -50,11 +50,12 @@ public class EmployeeDaoImp implements EmployeeInterF{
 	
 	
 	@Override
-	public Employee getUserLogin(String user, String psd) {	Employee employee=	(Employee)sessionFactory.getCurrentSession().createQuery("From Employee emp where emp.user='"+user+"' and emp.password='"+psd+"'").uniqueResult();
-		if(employee==null) {
-			return null;
-		}else {
+	public Employee getUserLogin(String user, String psd) {
+		Employee employee=	(Employee)sessionFactory.getCurrentSession().createQuery("From Employee emp where emp.user='"+user+"' and emp.password='"+psd+"'").uniqueResult();
+		if(employee !=null) {
 			return employee;
+		}else {
+			return null;
 		}	}
 	
 	
