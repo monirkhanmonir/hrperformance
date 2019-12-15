@@ -1,5 +1,6 @@
 package com.exam.controller;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,6 +28,7 @@ import com.exam.service.PerformanceRatingServiceInterF;
 import com.exam.service.TaskIssueInterFService;
 import com.exam.service.UserInfoService;
 import com.exam.service.WorkRepoServiceInterF;
+import com.ibm.icu.text.SimpleDateFormat;
 
 
 @RestController
@@ -84,7 +86,7 @@ public class RestTaskController {
 	
 	@PostMapping(value = "/storeEmp")
 	public Employee employeeRegister(@RequestBody Employee employee) {
-		System.out.println(employee.getEmpName());
+		System.out.println(employee.getPassword());
 
 		 employeeServiceInterF.storeEmployee(employee);
 
@@ -107,10 +109,48 @@ public class RestTaskController {
 	
 	@PostMapping(value = "/storeTaring")
 	public EmpRating storeRating(@RequestBody EmpRating empRating) {
-		System.out.println();
+		/*
+		 * int eid = empRating.getEmpId(); System.out.println(eid); WorkReport wr = new
+		 * WorkReport(); wr = workRepoServiceInterF.getWorkReportByID(eid);
+		 * System.out.println(wr.getEmpName()); wr.setRepoStatus("Done");
+		 * workRepoServiceInterF.updateRepoStatus(wr);
+		 */
 		System.out.println(empRating.getEmpName());
 		return	taskIssueInterFService.storePerformanceRating(empRating);
 		
+	}
+	
+	
+	@GetMapping(value = "/feedback/{user}")
+	public List<EmpRating> getFeedbace(@PathVariable String user) {
+		
+		System.out.println(user);
+		
+		List<Employee> empList = employeeServiceInterF.getByUser(user);
+		int id = empList.get(0).getId();
+		System.out.println(id);
+		List<EmpRating> ratinglist = performanceRatingServiceInterF.getRatingById(id);
+		System.out.println(ratinglist.get(0));
+		return ratinglist;
+	}
+	
+	
+	@PostMapping(value = "/workReport/{user}")
+	public void getEmpReport(@PathVariable("user") String user,@RequestBody WorkReport report) {
+		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        Date date = new Date();
+		System.out.println("report request accept");
+		List<Employee> empList = employeeServiceInterF.getByUser(user);
+		WorkReport wr = new WorkReport();
+		wr.setEmpId(empList.get(0).getId());
+		wr.setEmpName(empList.get(0).getEmpName());
+		wr.setJobTitle(empList.get(0).getJobTitle());
+		wr.setReopDate(formatter.format(date));
+		wr.setRepoDuration(report.getRepoDuration());
+		wr.setWorkReport(report.getWorkReport());
+		wr.setRepoStatus("applay");
+		workRepoServiceInterF.storeWorkReport(wr);
+	
 	}
 	
 	

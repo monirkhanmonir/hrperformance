@@ -39,6 +39,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 				.antMatchers("/empReport").permitAll()
 				.antMatchers("/storeTaring").permitAll()
 				.antMatchers("/login/{user}/{psd}").permitAll()
+				.antMatchers("/feedback/{user}").permitAll()
+				.antMatchers("/workReport/{user}").permitAll()
 				.antMatchers("/**").authenticated()				
 			.and()
 			.formLogin()
